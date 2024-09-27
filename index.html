@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Prince C. Dike</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Prince, Keyword summary of page content">
+    <meta name="keywords" content="WDD 131, Dynamic Web Fundamentals, Prince Dike, Brigham Young University, Nigeria, Igbo, B2B copywriting, SaaS, web development, resources, Nigeria culture, Nigerian flag">
+    <meta name="author" content="Prince Chidera Dike">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Prince C. Dike</h1>
+
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="chamber.html" class="nav-link">Chamber</a></li>
+                <li><a href="https://github.com/d9linkx" class="nav-link">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/prince-dike" class="nav-link">LinkedIn</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="courses-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all-btn" class="filter-btn">All</button>
+                <button id="cse-btn" class="filter-btn">CSE</button>
+                <button id="wdd-btn" class="filter-btn">WDD</button>
+            </div>
+            <div id="courses-container" class="course-grid">
+                <!-- Course buttons will be dynamically inserted here -->
+            </div>
+            <p>Total Credits Required: <span id="total-credits"></span></p>
+        </section>
+        
+        
+        <section class="card">
+            <div class="about-me-container">
+                <div class="about-me-text">
+                    <h2>About Me</h2>
+                    <p>I'm Prince, from the Igbo tribe of Nigeria. I craft compelling copy that's as sharp as a well-tuned blade.</p>
+                    <p>I am a student of Brigham Young University Idaho Online, and I have over four years of experience writing for B2B tech and SaaS companies. I've learned to slice through jargon and deliver messaging that hits the mark.</p>
+                    <p>I believe that creativity can come from anywhere. I'm always looking for new ways to express myself and inspire others with my words.</p>
+                </div>
+            <div class="profile-photo-container">
+                <img class="profile-photo" src="images/myprofilephoto.jpg" alt="Prince Dike - Profile Picture" width="250" height="350">
+            </div>
+            </div>
+            <h2>Nigeria</h2>
+            <div class="flag-container"> 
+                <img class="flag" src="images/nigerianflag.jpg" alt="Nigerian-flag" width="400" height="300">
+                <p>Heart of Africa: vibrant cultures, rich history, bustling cities, diverse wildlife, and the indomitable spirit of the Nigerian people.</p>
+            </div>
+        </section>         
+        <section class="card">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://www.udemy.com">Udemy</a></li>
+                <li><a href="https://www.avantaland.com">Avantaland</a></li>
+                <li><a href="https://www.princedikehub.com">Prince Dike's Hub</a></li>
+                <li><a href="https://www.metafinix.com">Metafinix</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- I can add more sections here with different content if needed -->
+    
+    <footer>
+        <p>© <span id="currentyear"></span> Prince Dike, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('nav-active');
+            console.log("Menu icon clicked!"); // Log for debugging
+        });
+    </script>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+
+</body>
+
+</html>
