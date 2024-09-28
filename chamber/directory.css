@@ -59,7 +59,7 @@ h2 {
 .directory-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 35px;
 }
 
 .member-card {
@@ -89,6 +89,10 @@ h2 {
     text-decoration: none;
 }
 
+.member-card:hover {
+    transform: scale(1.25); /* Slightly grow the card on hover */
+}
+
 /* List view styles */
 .directory-list {
     display: block;
@@ -111,3 +115,21 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+/* Grid view for wider screens */
+@media (min-width: 768px) {
+    .directory-grid {
+        flex-direction: row;
+        justify-content: flex-start; /* Align items to start of the container */
+        flex-wrap: wrap;
+        object-position: 0%;
+    }
+
+    .member-card {
+        width: auto; /* Two cards side by side in grid view */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
