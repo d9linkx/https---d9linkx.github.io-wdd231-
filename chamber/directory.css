@@ -29,7 +29,8 @@ nav ul li a {
 }
 
 main {
-    padding: 1rem;
+    padding: 9rem;
+    padding-top: 1rem;
 }
 
 h2 {
@@ -96,11 +97,7 @@ h2 {
     animation-duration: inherit;
 }
 
-/* List view styles */
-.directory-list {
-    display: block;
-    margin: 0 auto;
-}
+
 
 .directory-list .member-card {
     display: flex;
@@ -124,7 +121,7 @@ footer {
 
 /* Grid view for wider screens */
 @media (min-width: 768px) {
-    .directory-grid {
+    .directory-grid .directory-list {
         flex-direction: row;
         justify-content: flex-start; /* Align items to start of the container */
         flex-wrap: wrap;
@@ -133,9 +130,7 @@ footer {
 
     .member-card {
         width: auto; /* Two cards side by side in grid view */
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
+        align-items: flex-end;
+        flex-direction: row;}
 }
 
