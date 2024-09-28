@@ -24,10 +24,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #f0f0f0; /* Adjusted for better contrast */
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: #ffeb3b; /* Yellow on hover for better contrast */
+}
 
 h2 {
     text-align: center;
@@ -52,6 +55,11 @@ h2 {
 
 .toggle-view button.active {
     background-color: #0288D1;
+    color: white;
+}
+
+.toggle-view button:hover {
+    background-color: #005b9a; /* Darker blue on hover for better contrast */
     color: white;
 }
 
@@ -88,16 +96,18 @@ h2 {
 }
 
 .member-card a {
-    color: #0288D1;
+    color: #005b9a; /* Darker blue for better contrast */
     text-decoration: none;
+}
+
+.member-card a:hover {
+    color: #ff5722; /* Orange on hover for contrast */
 }
 
 .member-card:hover {
     transform: scale(1.03); /* Slightly grow the card on hover */
     animation-duration: inherit;
 }
-
-
 
 .directory-list .member-card {
     display: flex;
@@ -117,6 +127,15 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
+}
+
+footer a {
+    color: #ffeb3b; /* Yellow links in footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
 }
 
 /* Grid view for wider screens */
@@ -140,14 +159,10 @@ footer {
         text-align: center;
         margin: 0rem;
     }
-    
+
     main {
         padding: 5rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-
-    
-    
 }
-
