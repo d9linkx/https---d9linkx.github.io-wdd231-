@@ -90,7 +90,7 @@ h2 {
 }
 
 .member-card:hover {
-    transform: scale(1.25); /* Slightly grow the card on hover */
+    transform: scale(1.06); /* Slightly grow the card on hover */
 }
 
 /* List view styles */
