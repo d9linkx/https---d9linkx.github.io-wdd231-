@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chamber of Commerce Members Directory">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Prince Dike">
     <title>Chamber of Commerce Members Directory</title>
 
     <!-- Favicon -->
@@ -18,7 +18,10 @@
     <meta property="og:url" content="https://yourwebsite.com/directory.html">
 
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="directory.css">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <!-- JavaScript for dynamic last modified date -->
     <script>
@@ -44,26 +47,18 @@
         </div>
     </header>
 
+    <!-- Toggle View Buttons -->
+    <div class="toggle-view">
+        <button id="grid-view" class="active" data-view="grid">Grid View</button>
+        <button id="list-view" data-view="list">List View</button>
+    </div>
+
     <!-- Main Content: Directory of Members -->
     <main>
         <section>
             <h2>Members Directory</h2>
-            <div class="directory-grid">
-                <!-- Member Card 1 -->
-                <div class="member-card">
-                    <img src="images/member1.jpg" alt="Member 1">
-                    <h3>Member Name 1</h3>
-                    <p>Business Name</p>
-                    <p><a href="https://website1.com">Visit Website</a></p>
-                </div>
-                <!-- Member Card 2 -->
-                <div class="member-card">
-                    <img src="images/member2.jpg" alt="Member 2">
-                    <h3>Member Name 2</h3>
-                    <p>Business Name</p>
-                    <p><a href="https://website2.com">Visit Website</a></p>
-                </div>
-                <!-- Add more member cards as needed -->
+            <div id="members-directory" class="directory-grid">
+                <!-- Member cards will be dynamically loaded here from JSON -->
             </div>
         </section>
     </main>
@@ -72,9 +67,12 @@
     <footer>
         <div class="container">
             <p>Contact us: <a href="mailto:info@chamber.com">info@chamber.com</a> | Phone: (123) 456-7890</p>
-            <p>Developed by Your Name for WDD 231</p>
+            <p>Developed by Prince Dike for WDD 231</p>
             <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="directory.js"></script>
 </body>
 </html>

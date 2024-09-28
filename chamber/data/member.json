@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Akira Yamamoto",
+        "business": "Yamamoto Tech Solutions",
+        "phone": "555-123-4567",
+        "website": "https://yamamoto-tech.com",
+        "image": "akira.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Fatima Al-Farsi",
+        "business": "Al-Farsi Consulting",
+        "phone": "555-234-5678",
+        "website": "https://alfarsi-consulting.com",
+        "image": "fatima.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Diego Fernández",
+        "business": "Fernández Architecture Group",
+        "phone": "555-345-6789",
+        "website": "https://fernandez-architecture.com",
+        "image": "diego.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Amara Singh",
+        "business": "Singh Legal Services",
+        "phone": "555-456-7890",
+        "website": "https://singh-legal.com",
+        "image": "amara.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Lars Svensson",
+        "business": "Svensson Financial Advisors",
+        "phone": "555-567-8901",
+        "website": "https://svensson-financial.com",
+        "image": "lars.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Isabella Rossi",
+        "business": "Rossi Culinary Creations",
+        "phone": "555-678-9012",
+        "website": "https://rossi-culinary.com",
+        "image": "isabella.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Chen Wei",
+        "business": "Wei Import & Export",
+        "phone": "555-789-0123",
+        "website": "https://wei-importexport.com",
+        "image": "chen.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Oyindamola Dike",
+        "business": "Oyin's Agro Ventures",
+        "phone": "555-890-1234",
+        "website": "https://oyins-agro.com",
+        "image": "oyin.jpg",
+        "membership": 2
+    }
+]
