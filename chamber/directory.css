@@ -73,7 +73,7 @@ h2 {
 .member-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .member-card h3 {
@@ -97,12 +97,15 @@ h2 {
 /* List view styles */
 .directory-list {
     display: block;
+    margin: 0 auto;
 }
 
 .directory-list .member-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px; /* Add vertical spacing between rows */
+    padding: 1rem;
 }
 
 .directory-list .member-card img {
