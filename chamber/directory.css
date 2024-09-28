@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #0288D1;
+    background-color: #005b9a; /* Darker blue for better contrast */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -24,17 +24,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #f0f0f0; /* Adjusted for better contrast */
+    color: #f0f0f0; /* Lighter text for readability */
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #ffeb3b; /* Yellow on hover for better contrast */
+    color: #ffd700; /* Yellow on hover for high contrast */
 }
 
 h2 {
     text-align: center;
     margin-bottom: 2rem;
+    color: #333; /* Dark text for good contrast */
 }
 
 .toggle-view {
@@ -46,20 +47,20 @@ h2 {
     padding: 0.5rem 1rem;
     margin: 0rem 5px;
     margin-top: 2rem;
-    border: 1px solid #0288D1;
+    border: 1px solid #005b9a; /* Darker blue for contrast */
     border-radius: 5px;
     background-color: white;
-    color: #0288D1;
+    color: #005b9a; /* Darker blue text */
     cursor: pointer;
 }
 
 .toggle-view button.active {
-    background-color: #0288D1;
+    background-color: #005b9a;
     color: white;
 }
 
 .toggle-view button:hover {
-    background-color: #005b9a; /* Darker blue on hover for better contrast */
+    background-color: #003f6d; /* Even darker blue for better hover contrast */
     color: white;
 }
 
@@ -79,6 +80,7 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 1rem;
+    color: #333; /* Dark text for high contrast */
 }
 
 .member-card img {
@@ -89,19 +91,21 @@ h2 {
 
 .member-card h3 {
     margin: 10px 0 5px;
+    color: #333; /* Dark text for high contrast */
 }
 
 .member-card p {
     margin: 5px 0;
+    color: #555; /* Dark grey for body text */
 }
 
 .member-card a {
-    color: #005b9a; /* Darker blue for better contrast */
+    color: #005b9a; /* Darker blue for contrast */
     text-decoration: none;
 }
 
 .member-card a:hover {
-    color: #ff5722; /* Orange on hover for contrast */
+    color: #ff5722; /* Orange for good contrast on hover */
 }
 
 .member-card:hover {
@@ -123,19 +127,19 @@ h2 {
 }
 
 footer {
-    background-color: #0288D1;
+    background-color: #005b9a; /* Darker blue for contrast */
     color: white;
     text-align: center;
     padding: 1rem 0;
 }
 
 footer a {
-    color: #ffeb3b; /* Yellow links in footer */
+    color: #ffd700; /* High contrast yellow for links */
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #ffffff; /* White on hover */
+    color: #ffffff; /* White on hover for simple contrast */
 }
 
 /* Grid view for wider screens */
@@ -158,6 +162,7 @@ footer a:hover {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         text-align: center;
         margin: 0rem;
+        color: #333; /* Ensure text color is consistent for contrast */
     }
 
     main {
