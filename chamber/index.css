@@ -13,18 +13,6 @@ header {
     text-align: center;
 }
 
-/* Styling for the logo at the top left */
-.logo {
-    position: fixed;
-    top: 34px;
-    left: 30px;
-}
-
-.logo img {
-    width: 50px; /* Adjust size as needed */
-    
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -42,6 +30,18 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffd700; /* Yellow on hover for high contrast */
+}
+
+/* Styling for the logo at the top left */
+.logo {
+    position: fixed;
+    top: 34px;
+    left: 30px;
+}
+
+.logo img {
+    width: 50px; /* Adjust size as needed */
+    
 }
 
 h2 {
