@@ -1,4 +1,14 @@
-/* Basic styling for body and layout */
+/* Reset default styles */
+
+  /* Import Poppins font */
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+  
+  /* Set font family for the body */
+  body, h1, h2, h3, p {
+    font-family: 'Poppins', serif;
+  }
+  
+
 body {
     font-family: Poppins, sans-serif;
     margin: 0;
@@ -14,6 +24,8 @@ header {
     background-color: #005b9a; /* Darker blue for better contrast */
     color: white;
     padding: 1rem;
+
+    box-sizing: border-box;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -28,6 +40,22 @@ header {
 }
 
 /* Logo */
+
+/* Wayfinding effect: style for the active link */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust according to navbar height */
+    left: 0;
+    background-color: #0288D1; /* Same as navbar */
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
 
 nav ul {
     list-style-type: none;
@@ -77,7 +105,17 @@ nav {
     display: flex;
 }
 
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+    font-size: 28px; /* Size of the hamburger icon */
+    cursor: pointer; /* Show pointer on hover */
+    color: #FFFFFF; /* White color for icon */
+  }
+
 .ham-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
     height: 50px;
     width: 50px;
     margin-left: auto;
@@ -86,12 +124,20 @@ nav {
 
 .ham-menu span {
     display: block;
-    height: 5px;
-    width: 100%;
+    height: 3px;
+    width: 25px;
     background-color: #f0f0f0;
-    margin: 6px 0;
+    margin: 4px 0;
     transition: all 0.3s ease;
 }
+
+.nav-links.show {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
 
 /* For larger screens, show the normal menu and hide the hamburger */
 @media (min-width: 768px) {
@@ -104,22 +150,90 @@ nav {
     }
 }
 
-/* For smaller screens, hide the menu and show the hamburger */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide the full menu on smaller screens */
+/* Show hamburger on small screens */
+@media screen and (max-width: 768px) {
+    .hamburger {
+      display: flex;
     }
-
-    .ham-menu {
-        display: block; /* Show the hamburger menu */
+  
+    .nav-links {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #0288D1; /* Menu background color */
+      width: 10%;
+      height: 20vh; /* Full-screen height */
+      display: none; /* Hide by default */
+      justify-content: right;
+      align-items: center;
     }
-}
+  
+    .nav-links.show {
+      display: grid; /* Show when active */
+      flex-direction: column; /* Stack links vertically */
+    }
+  
+    .nav-links li {
+      margin: 20px 0;
+    }
+  
+    .nav-link {
+      font-size: 20px; /* Increase font size for mobile */
+    }
+  }
 
 .off-screen-menu {
     right: -100%; /* Initially hidden off the screen */
     transition: right 0.3s ease;
 }
 
+/* Responsive device styles */
+
+@media (max-width: 768px) { /* For mobile screens */
+
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position the menu */
+        background-color: #6e6e6e; /* Match header color */
+        width: 100%; /* Full width */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+    }
+  
+    .nav-links li {
+        margin: 0 15px; /* Space out the vertical links */
+        text-align: left; /* Center text */
+    }
+  
+    .menu-icon {
+        display: block; /* Show the menu icon on mobile */
+    }
+  }
+  
+  /* Show the nav links when the menu icon is clicked */
+  .nav-active {
+    display: flex; /* Display the links */
+  }
+
+@media (min-width: 769px) { /* For desktop screens */
+
+    .nav-links {
+        display: flex; /* Show navigation links as a horizontal list */
+        flex-direction: row; /* Align links horizontally */
+        position: static; /* Remove absolute positioning */
+        justify-content: space between;
+    }
+  
+    .nav-links li {
+        margin: 0; /* Space out the horizontal links */
+        text-align: left; /* Align text to the left */
+    }
+  
+    .menu-icon {
+        display: none; /* Hide the menu icon on desktop */
+    }
+  }
 
 /* Hero Section */
 .hero {

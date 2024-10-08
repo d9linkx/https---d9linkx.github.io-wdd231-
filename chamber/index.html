@@ -35,18 +35,16 @@
         <div class="container">
             <img id="logo" src="images/aerodromelogo.png" alt="Aerodrome Chamber of Commerce Logo" width="45" height="auto">
             <nav>
-                <ul>
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Discover</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="contact.html">Join</a></li>
                 </ul>
             </nav>
-            <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
     
@@ -167,6 +165,15 @@
             <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('nav-active');
+            console.log("Menu icon clicked!"); // Log for debugging
+        });
+    </script>
 </body>
 </html>
 
