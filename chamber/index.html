@@ -33,14 +33,22 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <img id="logo" src="images/aerodromelogo.png" alt="Aerodrome Chamber of Commerce Logo" width="60" height="auto">
+            <div>
+                <img id="logo" src="images/aerodromelogo.png" alt="Aerodrome Chamber of Commerce Logo" width="45" height="auto">
+            </div>
             <nav>
-                <ul>
+                <div class="hamburger" id="hamburger">
+                    &#9776; <!-- Hamburger Icon -->
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Discover</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="contact.html">Join</a></li>
                 </ul>
+                <div class="close-btn" id="close-btn">
+                    &times; <!-- Close Button Icon -->
+                </div>
             </nav>
         </div>
     </header>
@@ -164,7 +172,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="directory.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
 

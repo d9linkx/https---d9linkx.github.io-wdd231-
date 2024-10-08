@@ -22,9 +22,25 @@ header {
 
 }
 
-.container {
-    display: flex; /* Add display: flex to make the container horizontal */
-    align-items: center;
+.logo img {
+    width: 150px;
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-btn {
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: white;
 }
 
 .hero {
@@ -51,20 +67,62 @@ header {
     object-fit: cover;
 }
 
-
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.nav-links {
+    list-style: none;
     display: flex;
-    margin-left: 55.3rem;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin-left: 1rem;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles for Hamburger Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hidden initially */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0288D1;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .close-btn {
+        display: none; /* Hidden initially */
+    }
+
+    .nav-open .nav-links {
+        display: flex;
+    }
+
+    .nav-open .close-btn {
+        display: block;
+    }
+
+    .nav-open .hamburger {
+        display: none;
+    }
+}
+
 
 nav ul li a {
     color: #f0f0f0; /* Lighter text for readability */
