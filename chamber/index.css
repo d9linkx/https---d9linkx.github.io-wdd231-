@@ -12,12 +12,33 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: inline-flex; /* Add flexbox for horizontal alignment within the container */
+    align-items: center; /* Vertically center items */
+    justify-content: ;
+    padding: 1rem;
 }
 
 .logo {
-    display: inline-block;
-    vertical-align: middle;
 
+}
+
+.hero {
+    width: auto;
+    height: auto;
+    margin-top: -3rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .hero {
@@ -51,18 +72,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffd700; /* Yellow on hover for high contrast */
-}
-
-/* Styling for the logo at the top left */
-.logo {
-    position: fixed;
-    top: 34px;
-    left: 30px;
-}
-
-.logo img {
-    width: 50px; /* Adjust size as needed */
-    
 }
 
 h2 {
@@ -222,6 +231,7 @@ body {
     background-color: #f5f5f5;
 }
 
+
 /* Hero Section */
 .hero {
     background-color: #005b9a;
@@ -230,24 +240,15 @@ body {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-.hero button {
+.cta {
     padding: 0.75rem 2rem;
-    background-color: #ffd700;
+    background-color: #ffffff;
     border: none;
     color: #005b9a;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .hero button:hover {
