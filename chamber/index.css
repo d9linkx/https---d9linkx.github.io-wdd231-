@@ -3,16 +3,14 @@ body {
     font-family: Poppins, sans-serif;
     margin: 0;
     padding: 0;
-    margin-top: 80px;
+    margin-top: none;
     background-color: #f5f5f5;
 }
 
 header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 50px;
     background-color: #005b9a; /* Darker blue for better contrast */
     color: white;
     padding: 1rem;
@@ -20,26 +18,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Logo */
-.logo img {
-    width: 150px;
-}
-
-/* Hamburger menu */
-.hamburger {
-    display: none; /* Hidden on desktop */
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding-left: 0;
     display: flex;
+    padding-top: 3rem;
 }
 
 nav ul li {
@@ -56,48 +51,75 @@ nav ul li a:hover {
     color: #ffd700; /* Yellow on hover for high contrast */
 }
 
-/* Mobile view (for small screens) */
-@media (max-width: 768px) {
+
+.off-screen-menu {
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+
+/* For larger screens, show the normal menu and hide the hamburger */
+@media (min-width: 768px) {
+    .ham-menu {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
     nav ul {
-        display: none; /* Hide the menu initially */
-        flex-direction: column;
-        position: absolute;
-        top: 150px;
-        right: 30px;
-        width: 100%;
-        background-color: #005b9a;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 1rem 0;
-    }
-
-    nav ul.show {
-        display: flex; /* Show menu when toggled */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger icon on mobile */
-        margin-left: 420px;
-    }
-
-    /* Close button when menu is open */
-    .close-btn {
-        display: none; /* Hide the menu initially */
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0px;
-        width: 90%;
-        background-color: #005b9a;
-        text-align: center;
-    }
-
-    .close-btn.visible {
-        display: block;
+        display: flex; /* Show the full menu on larger screens */
     }
 }
+
+/* For smaller screens, hide the menu and show the hamburger */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the full menu on smaller screens */
+    }
+
+    .ham-menu {
+        display: block; /* Show the hamburger menu */
+    }
+}
+
+.off-screen-menu {
+    right: -100%; /* Initially hidden off the screen */
+    transition: right 0.3s ease;
+}
+
 
 /* Hero Section */
 .hero {
