@@ -1,5 +1,12 @@
 /* Reset default styles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
   /* Import Poppins font */
   @import url('https://fonts.googleapis.com/css?family=Poppins');
   
@@ -14,6 +21,7 @@ body {
     margin: 0;
     padding: 0;
     margin-top: none;
+    width: 100%;
     background-color: #f5f5f5;
 }
 
@@ -24,7 +32,6 @@ header {
     background-color: #005b9a; /* Darker blue for better contrast */
     color: white;
     padding: 1rem;
-
     box-sizing: border-box;
     z-index: 1000;
     display: flex;
@@ -33,11 +40,13 @@ header {
     height: 10vh;
 }
 
-.container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    max-width: 97.6%; /* Adjust max-width as needed */
+    padding: 0 1rem;
+  }
 
 /* Logo */
 
@@ -110,26 +119,12 @@ nav {
     font-size: 28px; /* Size of the hamburger icon */
     cursor: pointer; /* Show pointer on hover */
     color: #FFFFFF; /* White color for icon */
+    margin-left: 24.5rem;
   }
 
-.ham-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    margin-left: auto;
-    position: relative;
-}
 
-.ham-menu span {
-    display: block;
-    height: 3px;
-    width: 25px;
-    background-color: #f0f0f0;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
+
+
 
 .nav-links.show {
     display: flex;
@@ -161,25 +156,16 @@ nav {
       top: 50px;
       right: 0;
       background-color: #0288D1; /* Menu background color */
-      width: 10%;
-      height: 20vh; /* Full-screen height */
-      display: none; /* Hide by default */
-      justify-content: right;
-      align-items: center;
+      width: 100%;
+      padding: 10%;
+      margin-left: 17rem;
+      margin-top: 0rem;
+      height: 24.5vh; /* Full-screen height */
+      justify-content: center;
+      align-items: left;
     }
   
-    .nav-links.show {
-      display: grid; /* Show when active */
-      flex-direction: column; /* Stack links vertically */
-    }
-  
-    .nav-links li {
-      margin: 20px 0;
-    }
-  
-    .nav-link {
-      font-size: 20px; /* Increase font size for mobile */
-    }
+
   }
 
 .off-screen-menu {
@@ -195,7 +181,7 @@ nav {
         display: none; /* Hide navigation links by default */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Position the menu */
-        background-color: #6e6e6e; /* Match header color */
+        background-color: #828282; /* Match header color */
         width: 100%; /* Full width */
         top: 60px; /* Position below the header */
         left: 0; /* Align to the left */
@@ -205,6 +191,14 @@ nav {
         margin: 0 15px; /* Space out the vertical links */
         text-align: left; /* Center text */
     }
+
+    .menu-icon {
+        display: fixed; /* Hide the menu icon by default */
+        font-size: 28px; /* Size of the hamburger icon */
+        cursor: pointer; /* Show pointer on hover */
+        color: #FFFFFF; /* White color for icon */
+        margin-left: 18.5rem;
+      }
   
     .menu-icon {
         display: block; /* Show the menu icon on mobile */
