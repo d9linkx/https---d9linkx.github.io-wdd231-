@@ -2,6 +2,7 @@
 body {
     font-family: Poppins, sans-serif;
     margin: 0;
+    margin-top: 80px;
     padding: 0;
     background-color: #f5f5f5;
 }
@@ -12,6 +13,26 @@ header {
     padding: 1rem;
     text-align: center;
 }
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.hero {
+    width: auto;
+    height: auto;
+    margin-top: -3rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
 
 nav ul {
     list-style-type: none;
