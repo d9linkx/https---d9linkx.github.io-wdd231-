@@ -6,8 +6,9 @@
   @import url('https://fonts.googleapis.com/css?family=Poppins');
   
   /* Set font family for the body */
-  body, h1, h2, h3, p {
+body, h1, h2, h3, p {
     font-family: 'Poppins', serif;
+    position: relative;
   }
   
 
@@ -202,6 +203,11 @@ nav ul li a:hover {
 
 
 
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333; /* Dark text for good contrast */
+}
 
 
 
@@ -258,21 +264,93 @@ p {
 
 .community-info {
     background-color: #eee; /* Light background for better readability */
-    padding: 2rem; /* Add some padding */
+    padding: 3rem; /* Add some padding */
     margin-bottom: 2rem; /* Add space between sections */
+    justify-content: center;
+    width: auto;
+    
   }
   
   .community-info h2 {
     margin-bottom: 1rem; /* Space between heading and paragraph */
   }
+
+  .weather-container {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    margin-left: -6%;
+    align-items: center;
+    box-shadow: 0 2px 8px #0288D1;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+    font-weight: 300;
+}
+
+p {
+    padding-left: 10%;
+    margin-left: -2rem;
+}
+
+#current-weather p, .forecast-day p {
+    margin: 5px 0;
+    margin-left: -2rem;
+}
+
+.forecast {
+    margin-top: 20px;
+    
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.forecast-day p {
+    margin-left: -2rem;
+}
+
+@media (min-width: 600px) {
+    .weather-container {
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        box-shadow: 0 2px 8px #0288D1;
+        text-align: center;
+    }
+
+    h1, h2 {
+        margin: 0 0 20px;
+        font-weight: 300;
+    }
+    
+    p {
+        padding-left: 10%;
+        margin-left: -2rem;
+    }
+
+    .community-info p {
+        padding-left: 10%;
+        margin-left: rem;
+    }
+}
+
   
-  .weather-widget {
-    border: 1px solid #ddd; /* Simple border */
-    padding: 1rem; /* Padding within the widget */
-    margin-top: 1rem; /* Space after the paragraph */
-  }
-
-
   /*Business spotight area*/
 
   .business-spotlights {
@@ -328,11 +406,11 @@ p {
 
 
 
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333; /* Dark text for good contrast */
-}
+
+
+
+
+
 
 footer {
     background-color: #005b9a; /* Darker blue for contrast */
