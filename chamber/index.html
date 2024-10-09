@@ -35,9 +35,6 @@
         <div class="container">
             <img id="logo" src="images/aerodromelogo.png" alt="Aerodrome Chamber of Commerce Logo" width="45" height="auto">
             <nav>
-                <div class="menu-icon" id="menu-icon">
-                    &#9776; <!-- Hamburger icon -->
-                </div>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Discover</a></li>
@@ -46,7 +43,18 @@
                 </ul>
             </nav>
         </div>
+        <div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
     </header>
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="contact.html">Join</a>
+    </nav>
     
     <!-- Home Page -->
     <section id="home">
@@ -166,14 +174,9 @@
         </div>
     </footer>
 
-    <script>
-        // JavaScript to toggle mobile menu
-        document.getElementById('menu-icon').addEventListener('click', function() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('nav-active');
-            console.log("Menu icon clicked!"); // Log for debugging
-        });
-    </script>
+    <!-- JavaScript to toggle mobile menu -->
+
+    <script src="index.js"></script>
 </body>
 </html>
 

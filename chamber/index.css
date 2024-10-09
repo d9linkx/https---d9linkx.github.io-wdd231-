@@ -48,7 +48,74 @@ header .container {
     padding: 0 1rem;
   }
 
-/* Logo */
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0px;
+    transition: 0.5s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: #005b9a;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background-color: rgb(18, 112, 179);
+
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    background-color: #5190bc;
+    color: #000000;
+}
 
 /* Wayfinding effect: style for the active link */
 .nav-links {
@@ -89,40 +156,6 @@ nav ul li a:hover {
 }
 
 
-.off-screen-menu {
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed;
-    top: 0;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3s ease;
-}
-
-.off-screen-menu.active {
-    right: 0;
-}
-
-nav {
-    padding: 1rem;
-    display: flex;
-}
-
-.menu-icon {
-    display: none; /* Hide the menu icon by default */
-    font-size: 28px; /* Size of the hamburger icon */
-    cursor: pointer; /* Show pointer on hover */
-    color: #FFFFFF; /* White color for icon */
-    margin-left: 24.5rem;
-  }
-
-
 
 
 
@@ -134,100 +167,7 @@ nav {
     margin: 10px 0;
   }
 
-/* For larger screens, show the normal menu and hide the hamburger */
-@media (min-width: 768px) {
-    .ham-menu {
-        display: none; /* Hide hamburger on larger screens */
-    }
 
-    nav ul {
-        display: flex; /* Show the full menu on larger screens */
-    }
-}
-
-/* Show hamburger on small screens */
-@media screen and (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-  
-    .nav-links {
-      position: absolute;
-      top: 50px;
-      right: 0;
-      background-color: #0288D1; /* Menu background color */
-      width: 100%;
-      padding: 10%;
-      margin-left: 17rem;
-      margin-top: 0rem;
-      height: 24.5vh; /* Full-screen height */
-      justify-content: center;
-      align-items: left;
-    }
-  
-
-  }
-
-.off-screen-menu {
-    right: -100%; /* Initially hidden off the screen */
-    transition: right 0.3s ease;
-}
-
-/* Responsive device styles */
-
-@media (max-width: 768px) { /* For mobile screens */
-
-    .nav-links {
-        display: none; /* Hide navigation links by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position the menu */
-        background-color: #828282; /* Match header color */
-        width: 100%; /* Full width */
-        top: 60px; /* Position below the header */
-        left: 0; /* Align to the left */
-    }
-  
-    .nav-links li {
-        margin: 0 15px; /* Space out the vertical links */
-        text-align: left; /* Center text */
-    }
-
-    .menu-icon {
-        display: fixed; /* Hide the menu icon by default */
-        font-size: 28px; /* Size of the hamburger icon */
-        cursor: pointer; /* Show pointer on hover */
-        color: #FFFFFF; /* White color for icon */
-        margin-left: 18.5rem;
-      }
-  
-    .menu-icon {
-        display: block; /* Show the menu icon on mobile */
-    }
-  }
-  
-  /* Show the nav links when the menu icon is clicked */
-  .nav-active {
-    display: flex; /* Display the links */
-  }
-
-@media (min-width: 769px) { /* For desktop screens */
-
-    .nav-links {
-        display: flex; /* Show navigation links as a horizontal list */
-        flex-direction: row; /* Align links horizontally */
-        position: static; /* Remove absolute positioning */
-        justify-content: space between;
-    }
-  
-    .nav-links li {
-        margin: 0; /* Space out the horizontal links */
-        text-align: left; /* Align text to the left */
-    }
-  
-    .menu-icon {
-        display: none; /* Hide the menu icon on desktop */
-    }
-  }
 
 /* Hero Section */
 .hero {
