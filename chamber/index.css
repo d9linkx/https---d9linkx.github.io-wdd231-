@@ -229,7 +229,7 @@ h2 {
 .hero-text {
     text-align: center;
     color: white;
-    padding: 2rem; /* Add padding to the hero-text div */
+    padding: 1rem; /* Add padding to the hero-text div */
 }
 
 h1 {
