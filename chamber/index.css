@@ -43,6 +43,20 @@ header {
     height: 13vh;
 }
 
+ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+ul li a {
+    color: #f0f0f0; /* Lighter text for readability */
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #ffd700; /* Yellow on hover for high contrast */
+}
+
 .hamburger {
     position: relative;
     display: block;
@@ -124,48 +138,21 @@ header {
     .hamburger {
         display: block; /* Show the hamburger menu */
     }
+
+    .menu-links {
+        display: none;
+    }
 }
 
 /* Tablet/Desktop styles */
 @media (min-width: 768px) {
-    .mobile-nav2 {
-        display: flex; /* Show the navigation on larger screens */
+    .mobile-nav {
+        display: none; /* Show the navigation on larger screens */
     }
 
     .hamburger {
         display: none; /* Hide the hamburger menu */
     }
-
-    nav a {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .mobile-nav2 {
-        display: flex;
-        flex-direction: row;
-        position: fixed;
-        top: 7px; /* Adjust according to navbar height */
-        margin-left: 75%;
-        text-align: center;
-        color: #ffffff;
-        text-decoration: none;
-        list-style-type: none;
-        padding: 10px 5px;
-        transition: background-color 0.3s ease-in-out; 
-    }
-
-    .mobile-nav a {
-        margin: 0 15px; /* Spacing between links */
-        color: #FFF; /* Link color */
-        text-decoration: none; /* Remove underline */
-    }
-}
-
-
-/* Default state (visible on larger screens) */
-.nav-links {
-    display: flex; /* Display normally on desktop */
 }
 
 /* Hide navigation links on mobile */
