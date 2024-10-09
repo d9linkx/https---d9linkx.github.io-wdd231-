@@ -114,13 +114,60 @@ header .container {
 
 .mobile-nav a:hover {
     background-color: #5190bc;
-    color: #000000;
+    color: #ffffff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: block; /* Show the mobile navigation */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+    }
+
+    .nav-links {
+        display: none; /* Hide desktop links */
+    }
+}
+
+/* Tablet/Desktop styles */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none; /* Show the navigation on larger screens */
+    }
+
+    .hamburger {
+        display: none; /* Hide the hamburger menu */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: row;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust according to navbar height */
+        left: 0;
+        background-color: #0288D1; /* Same as navbar */
+        text-align: center;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 5px;
+        transition: background-color 0.3s ease-in-out; 
+    }
+
+    .nav-links a {
+        margin: 0 15px; /* Spacing between links */
+        color: #FFF; /* Link color */
+        text-decoration: none; /* Remove underline */
+    }
 }
 
 /* Wayfinding effect: style for the active link */
 .nav-links {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     position: absolute;
     top: 60px; /* Adjust according to navbar height */
