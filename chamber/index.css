@@ -376,10 +376,11 @@ p {
 /*Discover section*/
 
 .discover {
-    background-color: #247ba0; /* Blue background for contrast */
+    background-color: #0288D1; /* Blue background for contrast */
     text-align: center; /* Center the content */
     color: white; /* White text for better visibility */
-    padding: 3rem 2rem; /* More padding for a call to action section */
+    padding: 5rem 2rem; /* More padding for a call to action section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
   .discover h1 {
@@ -391,7 +392,7 @@ p {
   }
   
   .discover a.cta-btn {
-    background-color: #ffd700; /* Yellow button for attention */
+    background-color: #ffffff; /* Yellow button for attention */
     color: #000; /* Black text */
     padding: 12px 20px; /* Adjust button size */
     border-radius: 5px; /* Rounded corners */
@@ -400,15 +401,16 @@ p {
   }
   
   .discover a.cta-btn:hover {
-    background-color: #ffc107; /* Slightly lighter yellow on hover */
+    background-color: #ffd700; /* Slightly lighter yellow on hover */
   }
 
 
 
   .features {
     background-color: #f5f5f5; /* Light background for better contrast */
-    padding: 3rem 2rem; /* Add some padding */
+    padding: 0rem; /* Add some padding */
     text-align: center;
+    padding-top: 10%;
   }
   
   .features h2 {
@@ -540,7 +542,7 @@ p {
   }
   
   .testimonial img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 5%;
   }
