@@ -229,7 +229,7 @@ h2 {
 .hero-text {
     text-align: center;
     color: white;
-    padding: 1rem; /* Add padding to the hero-text div */
+    padding: 2rem; /* Add padding to the hero-text div */
 }
 
 h1 {
@@ -379,7 +379,7 @@ p {
     background-color: #0288D1; /* Blue background for contrast */
     text-align: center; /* Center the content */
     color: white; /* White text for better visibility */
-    padding: 5rem 2rem; /* More padding for a call to action section */
+    padding: 5rem 1rem; /* More padding for a call to action section */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
