@@ -2,14 +2,13 @@
 
 
 
-  /* Import Poppins font */
-  @import url('https://fonts.googleapis.com/css?family=Poppins');
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
   
   /* Set font family for the body */
 body, h1, h2, h3, p {
     font-family: 'Poppins', serif;
     position: relative;
-    
   }
 
 p {
@@ -291,6 +290,20 @@ p {
 .community-info h2 {
     margin-bottom: 1rem; /* Space between heading and paragraph */
   }
+
+.community-info p {
+  margin-left: -1.7rem;
+  justify-content: center;
+  align-items: center; /* Space between heading and paragraph */
+}
+
+@media (min_width: 768px) {
+  .community-info p {
+    margin-left: -1.7rem;
+  
+
+  }
+}
 
 .weather-container {
     background: rgba(0, 0, 0, 0.1);
