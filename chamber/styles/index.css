@@ -1,13 +1,8 @@
 /* Reset default styles */
 
 
-
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-  
   /* Set font family for the body */
 body, h1, h2, h3, p {
-    font-family: 'Poppins', serif;
     position: relative;
   }
 
