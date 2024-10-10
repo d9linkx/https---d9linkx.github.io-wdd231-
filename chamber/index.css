@@ -363,36 +363,100 @@ p {
     }
 }
 
+.spotlight-section h2 {
+  margin-top: 2rem;
+}
 
-.spotlights {
-    /* Styles for each individual spotlight element */
-    background-color: #fff;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
+.spotlight-member {
+  /* General styles for both mobile and desktop */
+  background-color: #fff;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center align content */
+}
+
+.spotlight-member img {
+  /* Styles for the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.spotlight-member h3 {
+  /* Styles for the name/title */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-member p {
+  /* General styles for text */
+  font-size: 14px;
+  color: #666;
+}
+
+.spotlight-member a {
+  /* Styles for the link */
+  font-size: 14px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.spotlight-member a:hover {
+  /* Hover effect for the website link */
+  text-decoration: underline;
+}
+
+.membership-level {
+  /* Membership level styles */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+/* Desktop Specific Layout */
+@media (min-width: 768px) {
+  .spotlight-container {
+      /* Ensures the spotlight members align in a grid layout on larger screens */
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
   }
-  
-.spotlights-image {
-    /* Styles for the image within each spotlight */
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+
+  .spotlight-member {
+    /* Adjust padding and alignment for desktop */
+    width: calc(33.333% - 20px); /* Set width for three columns layout */
+    text-align: center; /* Align content to the left */
+    align-items: center;
+    padding: 1.5rem; /* Increase padding for desktop */
+}
+
+  .spotlight-member img {
+      /* Constrain image size for better balance on larger screens */
+      max-width: 80%; /* Scale the image size down for desktop */
+      height: auto;
   }
-  
-.spotlights-title {
-    /* Styles for the title within each spotlight */
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+
+  .spotlight-member h3 {
+      /* Increase the font size slightly for larger screens */
+      font-size: 20px;
   }
-  
-.spotlight-description {
-    /* Styles for the description within each spotlight */
-    font-size: 14px;
-    color: #666;
+
+  .spotlight-member p {
+      /* Adjust font size for readability */
+      font-size: 16px;
   }
+
+  .spotlight-member a {
+      /* Adjust link font size */
+      font-size: 16px;
+  }
+}
+
   
   /*Business spotight area*/
 
@@ -422,13 +486,14 @@ p {
     background-color: #005b9a; /* Blue background for contrast */
     text-align: center; /* Center the content */
     color: white; /* White text for better visibility */
-    padding: 5rem 3rem; /* More padding for a call to action section */
+    padding: 8rem 3rem; /* More padding for a call to action section */
     margin: -2rem;
-    margin-top: 0rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
-  
+
+
 .discover h1 {
     margin-bottom: 1rem; /* Space between heading and paragraph */
   }
@@ -464,7 +529,7 @@ p {
   }
   
   .features h2 {
-    margin-top: -1rem;
+    margin-top: -4rem;
     margin-bottom: 1rem; /* Space between heading and feature boxes */
     color: #333; /* Dark text for good contrast (matches existing headings) */
   }

@@ -7,33 +7,50 @@ window.onload = function () {
         mobile_menu.classList.toggle('is-active');
     });
 
-    // Fetch and display member spotlights
-    fetch('member.json')
-        .then(response => response.json())
-        .then(data => {
-            const goldSilverMembers = data.filter(member => member.membership === 'Gold' || member.membership === 'Silver');
-            const selectedMembers = [];
+    // Fetch the JSON data
+fetch('data/member.json')
+.then(response => response.json())
+.then(data => {
+    // Filter out Gold and Silver members
+    const qualifiedMembers = data.filter(member => member.membership === 1 || member.membership === 2);
 
-            while (selectedMembers.length < 3 && goldSilverMembers.length > 0) {
-                const randomIndex = Math.floor(Math.random() * goldSilverMembers.length);
-                selectedMembers.push(goldSilverMembers.splice(randomIndex, 1)[0]);
-            }
+    // Shuffle the array to get random members
+    shuffleArray(qualifiedMembers);
 
-            const spotlightContainer = document.getElementById('spotlight-container');
-            selectedMembers.forEach(member => {
-                const memberDiv = document.createElement('div');
-                memberDiv.classList.add('spotlight');
-                memberDiv.innerHTML = `
-                    <img src="${member.logo}" alt="${member.name} Logo">
-                    <h3>${member.name}</h3>
-                    <p>${member.phone}</p>
-                    <p>${member.address}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
-                    <p>Membership Level: ${member.membership}</p>
-                `;
-                spotlightContainer.appendChild(memberDiv);
-            });
-        });
+    // Pick 2 or 3 random members (depending on how many are available)
+    const selectedMembers = qualifiedMembers.slice(0, 3);
+
+    // Inject the selected members into the HTML
+    for (let i = 0; i < selectedMembers.length; i++) {
+        const member = selectedMembers[i];
+        const memberDiv = document.getElementById(`member-${i+1}`);
+
+        if (memberDiv) {
+            document.getElementById(`member-${i+1}-image`).src = `images/${member.image}`;
+            document.getElementById(`member-${i+1}-name`).textContent = member.name;
+            document.getElementById(`member-${i+1}-business`).textContent = member.business;
+            document.getElementById(`member-${i+1}-address`).textContent = member.address;
+            document.getElementById(`member-${i+1}-phone`).textContent = member.phone;
+            document.getElementById(`member-${i+1}-website`).href = member.website;
+            document.getElementById(`member-${i+1}-website`).textContent = "Visit Website";
+
+            const membershipLevel = member.membership === 1 ? "Gold Member" : "Silver Member";
+            document.getElementById(`member-${i+1}-membership`).textContent = membershipLevel;
+        }
+    }
+})
+.catch(error => console.error('Error fetching member data:', error));
+
+// Function to shuffle the array (Fisher-Yates Shuffle)
+function shuffleArray(array) {
+for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+}
+}
+
+
+    
 
     // Fetch and display weather information
     const apiKey = '589084e95b90fbcb3ff92daebaa0d47b';
