@@ -634,8 +634,8 @@ p {
 }
 
 .testimonials:hover {
-  transform: translateY(-10px); /* Moves the block upwards */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
+  transform: scale(1.03); /* Slightly grow the card on hover */
+  animation-duration: inherit; /* Intensifies shadow on hover */
 }
 
 .testimonial img {
