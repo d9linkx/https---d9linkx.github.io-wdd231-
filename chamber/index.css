@@ -425,7 +425,7 @@ p {
     padding: 5rem 3rem; /* More padding for a call to action section */
     margin: -2rem;
     margin-top: 0rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
@@ -459,11 +459,13 @@ p {
     margin-right: -2rem;
     display: grid;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 15%;
+    margin-top: -4rem;
   }
   
   .features h2 {
-    margin-bottom: 2rem; /* Space between heading and feature boxes */
+    margin-top: -1rem;
+    margin-bottom: 1rem; /* Space between heading and feature boxes */
     color: #333; /* Dark text for good contrast (matches existing headings) */
   }
   
@@ -497,35 +499,29 @@ p {
     color: #333; /* Dark text for good contrast */
   }
 
-  .business-spotlights {
+
+
+
+
+  .business-spotlight {
     background-color: #f5f5f5; /* Light background for better contrast */
-    padding: 2rem; /* Add some padding */
+    padding: 0rem 0rem; /* More padding for a call to action section */
+    margin-left: -2rem;
+    margin-right: -2rem;
+    display: grid;
     text-align: center;
+    padding-top: 15%;
+    margin-top: -4rem;
   }
   
-  .business-spotlights h2 {
-    margin-bottom: 2rem; /* Space between heading and spotlight boxes */
+  .business-spotlight h2 {
+    margin-top: 1rem;
+    margin-bottom: 0; /* Space between heading and spotlight boxes */
     color: #333; /* Dark text for good contrast */
   }
+
   
-  .business-spotlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 35px;
-  }
-  
-  .business-spotlight-card {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 0rem;
-    color: #333; /* Dark text for high contrast */
-  }
-  
-  .business-spotlight-card img {
+  .business-spotlight img {
     max-width: 100%;
     height: auto;
     border-radius: 5%;
@@ -570,6 +566,7 @@ p {
     padding: 4rem 2rem; /* More padding for a call to action section */
     margin: -3rem; /* Add some padding */
     margin-bottom: rem;
+    margin-top: 1rem;
     text-align: center;
   }
 
