@@ -508,6 +508,7 @@ p {
     padding: 0rem 0rem; /* More padding for a call to action section */
     margin-left: -2rem;
     margin-right: -2rem;
+    margin-bottom: 2rem;
     display: grid;
     text-align: center;
     padding-top: 15%;
@@ -560,18 +561,20 @@ p {
 
 
 
-  
+
   .testimonials {
     background-color: #f5f5f5; /* Light background for better contrast */
-    padding: 4rem 2rem; /* More padding for a call to action section */
-    margin: -3rem; /* Add some padding */
-    margin-bottom: rem;
-    margin-top: 1rem;
+    padding: 2rem; /* More padding for a call to action section */
+    margin: -1rem; /* Add some padding */
+    margin-bottom: 4rem;
+    margin-top: -1rem;
     text-align: center;
-  }
-
-  .testmonials-container {
-    padding: 10rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333; /* Dark text for high contrast */
+    display: block;
   }
 
   .testimonials h2 {
@@ -580,19 +583,10 @@ p {
   }
   
   .testimonials-grid {
-    display: grid;
+    display: block;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   
-  .testimonial {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #333; /* Dark text for high contrast */
-  }
   
   .testimonial img {
     max-width: 30%;
