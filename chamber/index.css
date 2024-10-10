@@ -576,6 +576,11 @@ p {
     color: #333; /* Dark text for high contrast */
   }
 
+  .testimonials:hover {
+    transform: translateY(-10px); /* Moves the block upwards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
+  }
+
   .testimonials h2 {
     margin-bottom: 2rem; /* Space between heading and testimonials */
     color: #333; /* Dark text for good contrast */
@@ -621,16 +626,16 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.testimonials-block:hover {
-  background-color: #000;
-  color: #eee;
-}
-
 .testimonials-block {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust number of columns */
     gap: 50px; /* Space between the testimonial blocks */
     margin-top: 20px;
+}
+
+.testimonials:hover {
+  transform: translateY(-10px); /* Moves the block upwards */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
 }
 
 .testimonial img {
