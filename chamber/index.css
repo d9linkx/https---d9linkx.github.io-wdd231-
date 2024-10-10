@@ -374,7 +374,7 @@ p {
   margin-top: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   text-align: center; /* Center align content */
 }
 
@@ -396,12 +396,14 @@ p {
   /* General styles for text */
   font-size: 14px;
   color: #666;
+  line-height: 0rem;
 }
 
 .spotlight-member a {
   /* Styles for the link */
   font-size: 14px;
   color: #007BFF;
+  line-height: 5rem;
   text-decoration: none;
 }
 
