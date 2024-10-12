@@ -19,7 +19,8 @@ body {
     padding: 0;
     height: 100vh;
     overflow-x: hidden; /* Hide horizontal overflow */
-    }
+    overflow-y: auto;   /* Add vertical scrollbar when necessary */
+}
 
 header {
     position: fixed;
