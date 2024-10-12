@@ -18,6 +18,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto;   /* Add vertical scrollbar when necessary */
 }
 
 header {
@@ -590,7 +592,6 @@ p {
     display: grid;
     text-align: center;
     padding-top: 15%;
-    padding-bottom: 0rem;
     margin-top: -4rem;
   }
   
@@ -643,7 +644,6 @@ p {
     margin-bottom: 2rem; /* Space between heading and testimonials */
     color: #333; /* Dark text for good contrast */
     margin: 2rem;
-    margin-top: 4rem;
   }
 
   .testimonials {
@@ -684,6 +684,7 @@ p {
     margin: auto;
     color: #333; /* Dark text for high contrast */
     margin-top: 1rem;
+    paddinf
   }
   
   .testimonials p {
