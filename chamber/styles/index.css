@@ -26,7 +26,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #005b9a; /* Darker blue for better contrast */
+    background-color: #003366; color: #ffffff; /* Darker blue for better contrast */
     color: white;
     padding: 1rem;
     margin: 0;
@@ -46,12 +46,12 @@ ul li {
 }
 
 ul li a {
-    color: #f0f0f0; /* Lighter text for readability */
+    color: #ffffff; /* Lighter text for readability */
     text-decoration: none;
 }
 
 ul li a:hover {
-    color: #ffd700; /* Yellow on hover for high contrast */
+    color: #ffcc00; /* Yellow on hover for high contrast */
 }
 
 .hamburger {
@@ -95,7 +95,7 @@ ul li a:hover {
     min-height: 100vh;
     display: block;
     z-index: 98;
-    background-color: #005b9a;
+    background-color: #003366; color: #ffffff;
     padding-top: 120px;
     transition: 0.4s;
 }
@@ -114,7 +114,7 @@ ul li a:hover {
     text-align: center;
     margin-bottom: 16px;
     padding: 12px 16px;
-    background-color: rgb(18, 112, 179);
+    background-color: #1270b3;
 
     color: white;
     text-decoration: none;
@@ -122,7 +122,7 @@ ul li a:hover {
 
 
 .mobile-nav a:hover {
-    background-color: #5190bc;
+    background-color: #336699; color: #ffffff;
     color: #ffffff;
 }
 
@@ -201,15 +201,15 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* Yellow on hover for high contrast */
+  color: #ffd700; /* Yellow on hover for high contrast */
 }
 
 
 
 h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333; /* Dark text for good contrast */
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333; /* Dark text for good contrast */
 }
 
 
@@ -217,195 +217,572 @@ h2 {
 /* Hero Section */
 
 .hero-image {
-    background-image: linear-gradient(rgba(49, 122, 190, 0.7),rgba(0,0,0,0.7)), url("images/heroimage.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
+  background-image: linear-gradient(rgba(49, 122, 190, 0.7), rgba(0, 0, 0, 0.7)), url("../images/heroimage.jpg");
+  background-position: right center; /* Adjusted to push the image to the left */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
 .hero-text {
-    text-align: center;
-    color: white;
-    padding: 2rem; /* Add padding to the hero-text div */
+  text-align: center;
+  color: white;
+  padding: 2rem; /* Add padding to the hero-text div */
 }
 
 h1 {
-    margin-bottom: 1rem; /* Increase margin between h1 and p */
+  margin-bottom: 1rem; /* Increase margin between h1 and p */
 }
 
 p {
-    margin-bottom: 2rem; /* Increase margin between p and a */
+  margin-bottom: 2rem; /* Increase margin between p and a */
 }
 
 
 @media (min-width: 768px) {
-    .hero-text {
-        text-align: center;
-        color: white;
-        margin: 8rem;
-    }
+  .hero-text {
+      text-align: center;
+      color: white;
+      margin: 8rem;
+  }
 }
 
 .hero-text a {
-    padding: 10px 20px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 30px;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 30px;
 }
 
 .hero-text .hero-btn {
-  background-color: #5190bc;
-  color: #eee;
+background-color: #5190bc;
+color: #eee;
 }
 
 .hero-text .hero-btn:hover {
-  background-color: #eee; /* Yellow button for attention */
-  color: #005b9a;
+background-color: #eee; /* Yellow button for attention */
+color: #005b9a;
 }
 
 /*COMMUNITY AREA*/
 
 .community-info {
-    background-color: #eee; /* Light background for better readability */
-    padding: 2rem; /* Add some padding */
-    margin-bottom: 2rem; /* Add space between sections */
-    justify-content: center;
-    width: auto;
-    margin: 0rem;
-    margin-left: 0rem;
-  }
-  
+  background-color: #eee; /* Light background for better readability */
+  padding: 2rem; /* Add some padding */
+  margin-bottom: 2rem; /* Add space between sections */
+  justify-content: center;
+  width: auto;
+  margin: 0rem;
+  margin-left: 0rem;
+}
+
 .community-info h2 {
-    margin-bottom: 1rem; /* Space between heading and paragraph */
-  }
+  margin-bottom: 1rem; /* Space between heading and paragraph */
+}
 
 .community-info p {
-  margin-left: -1.7rem;
-  justify-content: center;
-  align-items: center; /* Space between heading and paragraph */
+margin-left: -1.7rem;
+justify-content: center;
+align-items: center; /* Space between heading and paragraph */
 }
 
 @media (min_width: 768px) {
-  .community-info p {
-    margin-left: -1.7rem;
-  }
+.community-info p {
+  margin-left: -1.7rem;
+}
 }
 
 .weather-container {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    padding-left: 0;
-    max-width: 600px;
-    display: grid;
-    width: 100%;
-    box-sizing: border-box;
-    margin: auto;
-    margin-left: 0;
-    align-items: center;
-    box-shadow: 0 2px 8px #005b9a;
-    text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding-left: 0;
+  max-width: 600px;
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  margin-left: 0;
+  align-items: center;
+  box-shadow: 0 2px 8px #005b9a;
+  text-align: center;
 }
 
 h1, h2 {
-    margin: 0 0 20px;
-    font-weight: 300;
+  margin: 0 0 20px;
+  font-weight: 300;
 }
 
 p {
-    padding-left: 10%;
-    margin-left: -2rem;
+  padding-left: 10%;
+  margin-left: -2rem;
 }
 
 #current-weather p, .forecast-day p {
-    margin: 5px 0;
-    margin-left: -2rem;
+  margin: 5px 0;
+  margin-left: -2rem;
 }
 
 .forecast {
-    margin-top: 20px;
-    margin: 1rem;
-    display: grid;
+  margin-top: 20px;
+  margin: 1rem;
+  display: grid;
 }
 
 .forecast-day {
-    background: rgba(141, 168, 174, 0.622);
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+  background: rgba(141, 168, 174, 0.622);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .forecast-day p {
-    margin-left: -2rem;
+  margin-left: -2rem;
 }
 
 @media (min-width: 600px) {
-    .weather-container {
-        padding: 15px;
-        background: rgba(144, 131, 131, 0.1);
-        border-radius: 30px;
-        padding: 20px;
-        max-width: 600px;
-        width: 100%;
-        margin: auto;
-        align-items: center;
-        box-shadow: 0 2px 8px #005b9a;
-        text-align: center;
-    }
+  .weather-container {
+      padding: 15px;
+      background: rgba(144, 131, 131, 0.1);
+      border-radius: 30px;
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      margin: auto;
+      align-items: center;
+      box-shadow: 0 2px 8px #005b9a;
+      text-align: center;
+  }
 
-    h1, h2 {
-        margin: 0 0 20px;
-        font-weight: 300;
-    }
-    
-    p {
-        padding-left: 10%;
-        margin-left: -2rem;
-    }
+  h1, h2 {
+      margin: 0 0 20px;
+      font-weight: 300;
+  }
+  
+  p {
+      padding-left: 10%;
+      margin-left: -2rem;
+  }
 
-    .community-info p {
-        padding-left: 10%;
-        margin-left: rem;
-    }
+  .community-info p {
+      padding-left: 10%;
+      margin-left: rem;
+  }
 }
 
 .spotlight-section h2 {
-  margin-top: 2rem;
+margin-top: 2rem;
 }
 
 .spotlight-member {
-  /* General styles for both mobile and desktop */
-  background-color: #fff;
-  padding: 1rem;
-  margin-top: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0rem;
-  text-align: center; /* Center align content */
+/* General styles for both mobile and desktop */
+background-color: #fff;
+padding: 1rem;
+margin-top: 1.5rem;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+margin-bottom: 0rem;
+text-align: center; /* Center align content */
 }
 
 .spotlight-member img {
-  /* Styles for the image */
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+/* Styles for the image */
+max-width: 100%;
+height: auto;
+border-radius: 5px;
 }
 
 .spotlight-member h3 {
-  /* Styles for the name/title */
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+/* Styles for the name/title */
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 0.5rem;
 }
+
+.spotlight-member p {
+/* General styles for text */
+font-size: 16px;
+color: #666;
+line-height: 0rem;
+}
+
+.spotlight-member a {
+/* Styles for the link */
+font-size: 14px;
+color: #007BFF;
+line-height: 5rem;
+text-decoration: none;
+}
+
+.spotlight-member a:hover {
+/* Hover effect for the website link */
+text-decoration: underline;
+}
+
+.membership-level {
+/* Membership level styles */
+font-size: 14px;
+font-weight: bold;
+color: #333;
+margin-top: 0.5rem;
+}
+
+/* Desktop Specific Layout */
+@media (min-width: 768px) {
+.spotlight-container {
+    /* Ensures the spotlight members align in a grid layout on larger screens */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.spotlight-member {
+  /* Adjust padding and alignment for desktop */
+  width: calc(33.333% - 20px); /* Set width for three columns layout */
+  text-align: center; /* Align content to the left */
+  align-items: center;
+  padding: 1.5rem; /* Increase padding for desktop */
+}
+
+.spotlight-member img {
+    /* Constrain image size for better balance on larger screens */
+    max-width: 80%; /* Scale the image size down for desktop */
+    height: auto;
+}
+
+.spotlight-member h3 {
+    /* Increase the font size slightly for larger screens */
+    font-size: 20px;
+}
+
+.spotlight-member p {
+    /* Adjust font size for readability */
+    font-size: 16px;
+}
+
+.spotlight-member a {
+    /* Adjust link font size */
+    font-size: 16px;
+}
+}
+
+
+/*Business spotight area*/
+
+.business-spotlights {
+  background-color: #f5f5f5; /* Slightly lighter background */
+  padding: 2rem; /* Add some padding */
+  margin-bottom: 2rem; /* Add space between sections */
+}
+
+.business-spotlights h2 {
+  margin-bottom: 1.5rem; /* Space between heading and businesses */
+}
+
+.business {
+  margin-bottom: 1rem; /* Space between each business entry */
+  border-bottom: 1px solid #ddd; /* Simple border to separate entries */
+  padding-bottom: 1rem; /* Padding within each business entry */
+}
+
+.business h3 {
+  margin-bottom: 0.5rem; /* Reduce space between title and description */
+}
+
+/*Discover section*/
+
+.discover {
+  background-color: #005b9a; /* Blue background for contrast */
+  text-align: center; /* Center the content */
+  color: white; /* White text for better visibility */
+  padding: 8rem 2rem; /* More padding for a call to action section */
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+  margin-top: 0rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+.discover h1 {
+  margin-bottom: 1rem; /* Space between heading and paragraph */
+}
+
+.discover p {
+  margin-bottom: 2rem; /* Space before the call to action button */
+}
+
+.discover a.cta-btn {
+  background-color: #ffffff; /* Yellow button for attention */
+  color: #000; /* Black text */
+  padding: 12px 20px; /* Adjust button size */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.discover a.cta-btn:hover {
+  background-color: #ffd700; /* Slightly lighter yellow on hover */
+}
+
+
+.features {
+background-color: #f5f5f5; /* Light background for better contrast */
+padding: 0rem 0rem; /* More padding for a call to action section */
+display: grid;
+text-align: center;
+padding-top: 2rem;
+margin-top: -6rem;
+}
+
+.features h2 {
+margin-top: 0rem;
+margin-bottom: 1rem; /* Space between heading and feature boxes */
+color: #333; /* Dark text for good contrast (matches existing headings) */
+}
+
+.feature-box {
+display: flex;
+padding: 3rem;
+margin-top: -3rem;
+flex-wrap: wrap; /* Allow items to wrap if needed */
+justify-content: space-around; /* Evenly distribute feature boxes */
+}
+
+.feature-box div {
+text-align: center; /* Center content within boxes */
+margin: 1rem; /* Space between feature boxes */
+padding: 1.5rem; /* Padding within each box */
+background-color: #fff; /* White background for content */
+border-radius: 5px; /* Rounded corners for a cleaner look */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+color: #333; /* Dark text for good contrast */
+}
+
+.feature-box div:hover {
+transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.feature-box img {
+margin-bottom: 1rem; /* Space between image and heading */
+}
+
+.feature-box h3 {
+margin-bottom: 0.5rem; /* Reduce space between heading and paragraph */
+color: #333; /* Dark text for good contrast */
+}
+
+
+
+
+
+.business-spotlight {
+  background-color: #f5f5f5; /* Light background for better contrast */
+  margin-bottom: 2rem;
+  padding: -5rem; /* More padding for a call to action section */
+  margin: -2rem; /* Add some padding */
+  display: grid;
+  text-align: center;
+  padding-top: 15%;
+  margin-top: -4rem;
+}
+
+.business-spotlight h2 {
+  margin-top: -2rem;
+  margin-bottom: 0; /* Space between heading and spotlight boxes */
+  color: #333; /* Dark text for good contrast */
+}
+
+
+.business-spotlight img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.business-spotlight-card h3 {
+  margin: 10px 0 5px;
+  color: #333; /* Dark text for high contrast */
+}
+
+.business-spotlight-card p {
+  margin: 5px 0;
+  color: #555; /* Dark grey for body text */
+}
+
+.business-spotlight-card a {
+  color: #005b9a; /* Darker blue for contrast */
+  text-decoration: none;
+}
+
+.business-spotlight-card a:hover {
+  color: #ff5722; /* Orange for good contrast on hover */
+}
+
+.business-spotlight-card:hover {
+  transform: scale(1.03); /* Slightly grow the card on hover */
+  animation-duration: inherit;
+}
+
+@media (min-width: 768px) {
+  .business-spotlights-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid column width */
+  }
+}
+
+
+
+.testimonial-container {
+  margin-bottom: 2rem; /* Space between heading and testimonials */
+  color: #333; /* Dark text for good contrast */
+  margin: 2rem;
+}
+
+.testimonials {
+  background-color: #f5f5f5; /* Light background for better contrast */
+  padding: 1rem; /* More padding for a call to action section */
+  margin: 0rem; /* Add some padding */
+  margin-bottom: 4rem;
+  margin-top: 0rem;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333; /* Dark text for high contrast */
+}
+
+.testimonials:hover {
+  transform: translateY(-10px); /* Moves the block upwards */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
+}
+
+.testimonials-block {
+  display: block;
+  align-items: center;
+  position: relative;
+  margin-bottom: -2rem;
+  padding-top: 1rem;
+  padding: -2rem;
+}
+
+.testimonials img {
+  width: 80%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.testimonials h3 {
+  margin: auto;
+  color: #333; /* Dark text for high contrast */
+  margin-top: 1rem;
+}
+
+.testimonials p {
+  color: #555; /* Dark grey for body text */
+}
+
+.testimonials a {
+  color: #005b9a; /* Darker blue for contrast */
+  text-decoration: none;
+}
+
+.testimonials a:hover {
+  text-decoration: underline;
+  color: #836f00;
+}
+
+/* Grid view for wider screens */
+@media (min-width: 768px) {
+.testimonials {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust number of columns */
+  gap: 50px; /* Space between the testimonial blocks */
+  margin-top: 20px;
+}
+
+.testimonials:hover {
+transform: scale(1.03); /* Slightly grow the card on hover */
+animation-duration: inherit; /* Intensifies shadow on hover */
+}
+
+.testimonial img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.testimonial a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0288D1; /* Link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.testimonials a:hover {
+  text-decoration: underline;
+}
+
+}
+
+
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid column width */
+  }
+}
+
+
+
+footer {
+  background-color: #005b9a; /* Darker blue for contrast */
+  color: white;
+  text-align: center;
+  padding: 2rem 3rem; /* More padding for a call to action section */
+  margin: -3rem;
+  margin-left: -2rem;
+  margin-right: 0rem;
+}
+
+footer .container p {
+font-size: 16px; /* or any size you prefer */
+}
+
+footer a {
+  color: #ffd700; /* High contrast yellow for links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff; /* White on hover for simple contrast */
+}
+
+
 
 .spotlight-member p {
   /* General styles for text */
@@ -567,6 +944,8 @@ p {
   color: #333; /* Dark text for good contrast */
 }
 
+
+
 .feature-box div:hover {
   transform: translateY(-5px); /* Slight lift on hover */
 }
@@ -580,160 +959,152 @@ p {
   color: #333; /* Dark text for good contrast */
 }
 
-
-
-
-
-  .business-spotlight {
-    background-color: #f5f5f5; /* Light background for better contrast */
-    margin-bottom: 2rem;
-    padding: -5rem; /* More padding for a call to action section */
-    margin: -2rem; /* Add some padding */
-    display: grid;
-    text-align: center;
-    padding-top: 15%;
-    margin-top: -4rem;
-  }
-  
-  .business-spotlight h2 {
-    margin-top: -2rem;
-    margin-bottom: 0; /* Space between heading and spotlight boxes */
-    color: #333; /* Dark text for good contrast */
-  }
-
-  
-  .business-spotlight img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5%;
-  }
-  
-  .business-spotlight-card h3 {
-    margin: 10px 0 5px;
-    color: #333; /* Dark text for high contrast */
-  }
-  
-  .business-spotlight-card p {
-    margin: 5px 0;
-    color: #555; /* Dark grey for body text */
-  }
-  
-  .business-spotlight-card a {
-    color: #005b9a; /* Darker blue for contrast */
-    text-decoration: none;
-  }
-  
-  .business-spotlight-card a:hover {
-    color: #ff5722; /* Orange for good contrast on hover */
-  }
-  
-  .business-spotlight-card:hover {
-    transform: scale(1.03); /* Slightly grow the card on hover */
-    animation-duration: inherit;
-  }
-  
-  @media (min-width: 768px) {
-    .business-spotlights-grid {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid column width */
-    }
-  }
-
-
-
-  .testimonial-container {
-    margin-bottom: 2rem; /* Space between heading and testimonials */
-    color: #333; /* Dark text for good contrast */
-    margin: 2rem;
-  }
-
-  .testimonials {
-    background-color: #f5f5f5; /* Light background for better contrast */
-    padding: 1rem; /* More padding for a call to action section */
-    margin: 0rem; /* Add some padding */
-    margin-bottom: 4rem;
-    margin-top: 0rem;
-    text-align: center;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #333; /* Dark text for high contrast */
-  }
-
-  .testimonials:hover {
-    transform: translateY(-10px); /* Moves the block upwards */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
-  }
-  
-  .testimonials-block {
-    display: block;
-    align-items: center;
-    position: relative;
-    margin-bottom: -2rem;
-    padding-top: 1rem;
-    padding: -2rem;
-  }
-  
-  .testimonials img {
-    width: 80%;
-    height: auto;
-    border-radius: 5%;
-  }
-  
-  .testimonials h3 {
-    margin: auto;
-    color: #333; /* Dark text for high contrast */
-    margin-top: 1rem;
-  }
-  
-  .testimonials p {
-    color: #555; /* Dark grey for body text */
-  }
-  
-  .testimonials a {
-    color: #005b9a; /* Darker blue for contrast */
-    text-decoration: none;
-  }
-
-  .testimonials a:hover {
-    text-decoration: underline;
-    color: #836f00;
+.business-spotlight {
+  background-color: #f5f5f5; /* Light background for better contrast */
+  margin-bottom: 2rem;
+  padding: 2rem; /* More padding for a call to action section */
+  display: grid;
+  text-align: center;
+  padding-top: 15%;
+  margin-top: -4rem;
 }
-  
+
+.business-spotlight h2 {
+  margin-top: -2rem;
+  margin-bottom: 0; /* Space between heading and spotlight boxes */
+  color: #333; /* Dark text for good contrast */
+}
+
+.business-spotlight img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.business-spotlight-card h3 {
+  margin: 10px 0 5px;
+  color: #333; /* Dark text for high contrast */
+}
+
+.business-spotlight-card p {
+  margin: 5px 0;
+  color: #555; /* Dark grey for body text */
+}
+
+.business-spotlight-card a {
+  color: #005b9a; /* Darker blue for contrast */
+  text-decoration: none;
+}
+
+.business-spotlight-card a:hover {
+  color: #ff5722; /* Orange for good contrast on hover */
+}
+
+.business-spotlight-card:hover {
+  transform: scale(1.03); /* Slightly grow the card on hover */
+  animation-duration: inherit;
+}
+
+@media (min-width: 768px) {
+  .business-spotlights-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid column width */
+  }
+}
+
+.testimonial-container {
+  margin-bottom: 2rem; /* Space between heading and testimonials */
+  color: #333; /* Dark text for good contrast */
+  margin: 2rem;
+}
+
+.testimonials {
+  background-color: #f5f5f5; /* Light background for better contrast */
+  padding: 1rem; /* More padding for a call to action section */
+  margin: 0rem; /* Add some padding */
+  margin-bottom: 4rem;
+  margin-top: 0rem;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #333; /* Dark text for high contrast */
+}
+
+.testimonials:hover {
+  transform: translateY(-10px); /* Moves the block upwards */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow on hover */
+}
+
+.testimonials-block {
+  display: block;
+  align-items: center;
+  position: relative;
+  margin-bottom: -2rem;
+  padding-top: 1rem;
+}
+
+.testimonials img {
+  width: 80%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.testimonials h3 {
+  margin: auto;
+  color: #333; /* Dark text for high contrast */
+  margin-top: 1rem;
+}
+
+.testimonials p {
+  color: #555; /* Dark grey for body text */
+}
+
+.testimonials a {
+  color: #005b9a; /* Darker blue for contrast */
+  text-decoration: none;
+}
+
+.testimonials a:hover {
+  text-decoration: underline;
+  color: #836f00;
+}
+
 /* Grid view for wider screens */
 @media (min-width: 768px) {
   .testimonials {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+  }
 
-.testimonials-block {
+  .testimonials-block {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust number of columns */
     gap: 50px; /* Space between the testimonial blocks */
     margin-top: 20px;
-}
+  }
 
-.testimonials:hover {
-  transform: scale(1.03); /* Slightly grow the card on hover */
-  animation-duration: inherit; /* Intensifies shadow on hover */
-}
+  .testimonials:hover {
+    transform: scale(1.03); /* Slightly grow the card on hover */
+    animation-duration: inherit; /* Intensifies shadow on hover */
+  }
 
-.testimonial img {
+  .testimonial img {
     max-width: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
-}
+  }
 
-.testimonial h3 {
+  .testimonial h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;
-}
+  }
 
-.testimonial p {
+  .testimonial p {
     font-size: 1rem;
     color: #555;
+  }
 }
+
 
 .testimonial a {
     display: inline-block;
@@ -747,26 +1118,31 @@ p {
     text-decoration: underline;
 }
 
+
+.testimonial a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0288D1; /* Link color */
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.testimonials a:hover {
+  text-decoration: underline;
+}
 
-
-  @media (min-width: 768px) {
-    .testimonials-grid {
+@media (min-width: 768px) {
+  .testimonials-grid {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid column width */
-    }
   }
-
-
+}
 
 footer {
-    background-color: #005b9a; /* Darker blue for contrast */
-    color: white;
-    text-align: center;
-    padding: 2rem 3rem; /* More padding for a call to action section */
-    margin: -3rem;
-    margin-left: -2rem;
-    margin-right: 0rem;
+  background-color: #003366; /* Darker blue for contrast */
+  color: white;
+  text-align: center;
+  padding: 2rem 3rem; /* More padding for a call to action section */
+  margin: 0;
 }
 
 footer .container p {
@@ -774,11 +1150,10 @@ footer .container p {
 }
 
 footer a {
-    color: #ffd700; /* High contrast yellow for links */
-    text-decoration: none;
+  color: #ffd700; /* High contrast yellow for links */
+  text-decoration: none;
 }
 
 footer a:hover {
-    color: #ffffff; /* White on hover for simple contrast */
+  color: #ffffff; /* White on hover for simple contrast */
 }
-
