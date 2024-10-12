@@ -289,7 +289,7 @@ color: #005b9a;
 }
 
 .community-info p {
-margin-left: -1.7rem;
+margin-left: 1rem;
 justify-content: center;
 align-items: center; /* Space between heading and paragraph */
 }
@@ -587,8 +587,8 @@ color: #333; /* Dark text for good contrast */
 .business-spotlight {
   background-color: #f5f5f5; /* Light background for better contrast */
   margin-bottom: 2rem;
-  padding: -5rem; /* More padding for a call to action section */
-  margin: -2rem; /* Add some padding */
+  margin: 2rem auto; /* Adjusted to a positive value */
+  padding: 2rem;
   display: grid;
   text-align: center;
   padding-top: 15%;
@@ -708,11 +708,13 @@ color: #333; /* Dark text for good contrast */
 }
 
 .testimonials-block {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust number of columns */
-  gap: 50px; /* Space between the testimonial blocks */
-  margin-top: 20px;
+  display: block;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem; /* Adjusted to a positive value */
+  padding-top: 1rem;
 }
+
 
 .testimonials:hover {
 transform: scale(1.03); /* Slightly grow the card on hover */
