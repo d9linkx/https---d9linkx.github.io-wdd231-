@@ -374,7 +374,6 @@ p {
 
   .community-info p {
       padding-left: 10%;
-      margin-left: rem;
   }
 }
 
@@ -671,7 +670,6 @@ color: #333; /* Dark text for good contrast */
   position: relative;
   margin-bottom: -2rem;
   padding-top: 1rem;
-  padding: -2rem;
 }
 
 .testimonials img {
