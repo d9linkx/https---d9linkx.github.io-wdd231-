@@ -291,7 +291,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0288D1;
+    background-color: #ffd700;
+    color: #003366;
 }
 
 /* Membership Cards Container */
