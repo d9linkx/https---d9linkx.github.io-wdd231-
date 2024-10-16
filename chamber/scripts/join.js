@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close modals when clicking the close button
-    closeButtons.forEach(button => {
+
+    document.querySelectorAll('.close').forEach(button => {
         button.addEventListener('click', () => {
             const modal = button.closest('.modal');
             if (modal) {

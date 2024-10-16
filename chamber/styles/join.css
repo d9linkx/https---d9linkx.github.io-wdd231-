@@ -330,7 +330,7 @@ button[type="submit"]:hover {
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #fefefe;
     position: fixed; /* Fixed position to center the modal */
     top: 50%;
     left: 50%;
