@@ -1,13 +1,3 @@
-window.onload = function () {
-    const menu_btn = document.querySelector('.hamburger');
-    const mobile_menu = document.querySelector('.mobile-nav');
-
-    menu_btn.addEventListener('click', function () {
-        menu_btn.classList.toggle('is-active');
-        mobile_menu.classList.toggle('is-active');
-    });
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Animate membership cards on load
     const cards = document.querySelectorAll('.membership-card');
@@ -58,4 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+window.onload = function () {
+    const menu_btn = document.querySelector('.hamburger');
+    const mobile_menu = document.querySelector('.mobile-nav');
+
+    menu_btn.addEventListener('click', function () {
+        menu_btn.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active');
+    });
 }
