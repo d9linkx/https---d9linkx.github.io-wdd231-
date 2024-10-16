@@ -274,7 +274,7 @@ textarea {
 
 /* Change border and shadow on focus */
 textarea:focus {
-    border-color: #003366; /* Secondary color on focus */
+    border-color: #81D4FA; /* Secondary color on focus */
     box-shadow: 0 3px 6px rgba(0, 136, 209, 0.2); /* Slightly larger shadow on focus */
     outline: none; /* Remove the default outline */
 }
