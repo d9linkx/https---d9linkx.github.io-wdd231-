@@ -2,7 +2,7 @@
 
 
   /* Set font family for the body */
-  body, h1, h2, h3, p {
+body, h1, h2, h3, p {
     position: relative;
   }
 
@@ -187,7 +187,7 @@ nav ul {
     padding-left: 10%;
     margin-top: -14%;
     display: flex;
-    margin-left: 1rem;
+    margin-left: -24rem;
 }
 
 nav ul li {
@@ -204,6 +204,9 @@ nav ul li a:hover {
   color: #ffd700; /* Yellow on hover for high contrast */
 }
 
+h1 {
+    text-align: center;
+}
 
 h2 {
   text-align: center;
@@ -217,6 +220,8 @@ h2 {
 main {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
