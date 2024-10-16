@@ -1,0 +1,400 @@
+/* Reset default styles */
+
+
+  /* Set font family for the body */
+  body, h1, h2, h3, p {
+    position: relative;
+  }
+
+p {
+    font-size: 16px; /* or any size you prefer */
+    margin-bottom: 2rem; /* existing style */
+    padding-left: 10%; /* existing style */
+    margin-left: -2rem; /* existing style */
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto;   /* Add vertical scrollbar when necessary */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #003366; color: #ffffff; /* Darker blue for better contrast */
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    margin-left: 0rem;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 13vh;
+}
+
+ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+ul li a {
+    color: #ffffff; /* Lighter text for readability */
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #ffcc00; /* Yellow on hover for high contrast */
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0px;
+    transition: 0.5s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: #003366; color: #ffffff;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background-color: #1270b3;
+
+    color: white;
+    text-decoration: none;
+}
+
+
+.mobile-nav a:hover {
+    background-color: #336699; color: #ffffff;
+    color: #ffffff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: block; /* Show the mobile navigation */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+    }
+
+    .menu-links {
+        display: none;
+    }
+}
+
+/* Tablet/Desktop view */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none; /* Show the navigation on larger screens */
+    }
+
+    .hamburger {
+        display: none; /* Hide the hamburger menu */
+    }
+}
+
+/* Hide navigation links on mobile */
+
+@media (max-width: 768px) {
+    .mobile-nav2 {
+        display: none; /* Show the navigation on larger screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none; /* Hide on screens smaller than 768px */
+    }
+}
+
+/* Wayfinding effect: style for the active link */
+.nav-links {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust according to navbar height */
+    left: 0;
+    background-color: #0288D1; /* Same as navbar */
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+nav ul {
+    list-style-type: none;
+    padding-left: 10%;
+    margin-top: -14%;
+    display: flex;
+    margin-left: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #f0f0f0; /* Lighter text for readability */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Yellow on hover for high contrast */
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333; /* Dark text for good contrast */
+}
+
+
+
+/* Main Body Styling */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Form Styling */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #0288D1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #026fa1;
+}
+
+/* Membership Cards Container */
+.membership-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Membership Card Styling */
+.membership-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.membership-card h2 {
+    color: #0288D1;
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.membership-card a {
+    text-decoration: none;
+    color: #0288D1;
+    font-weight: bold;
+    border: 2px solid #0288D1;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.membership-card a:hover {
+    background-color: #0288D1;
+    color: white;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    position: fixed; /* Fixed position to center the modal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #0288D1;
+}
+
+.modal ul {
+    padding-left: 20px;
+}
+
+.modal ul li {
+    margin-bottom: 10px;
+    margin-bottom: 32rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+footer {
+  background-color: #003366; /* Darker blue for contrast */
+  color: white;
+  text-align: center;
+  padding: 2rem 3rem; /* More padding for a call to action section */
+  margin: 0;
+}
+
+footer .container p {
+  font-size: 16px; /* or any size you prefer */
+}
+
+footer a {
+  color: #ffd700; /* High contrast yellow for links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff; /* White on hover for simple contrast */
+}
+
+
+

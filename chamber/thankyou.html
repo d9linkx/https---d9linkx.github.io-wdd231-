@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aerodrome Chamber of Commerce">
+    <meta name="author" content="Prince Dike">
+    <title>Aerodrome Chamber of Commerce</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Settings for Facebook -->
+    <meta property="og:title" content="Chamber of Commerce Members Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://d9linkx.github.io/wdd231/chamber/images/social-image.png">
+    <meta property="og:url" content="https://d9linkx.github.io/wdd231/chamber/directory.html">
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles/thankyou.css">
+    
+    <!-- JavaScript for dynamic last modified date -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lastModified = new Date(document.lastModified);
+            document.getElementById("last-modified").textContent = lastModified.toDateString();
+        });
+    </script>
+</head>
+<body>
+    <!-- Hero area -->
+
+<!-- Header -->
+<header>
+    <div class="menus">
+        <img id="logo" src="images/aerodromelogo.png" alt="Aerodrome Chamber of Commerce Logo" width="45">
+    </div>
+    <div>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+        </button>
+    </div>
+    <nav class="menu-links" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Discover Us</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+</header>
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="discover.html">Discover</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
+</nav>
+
+
+    <h1>Thank you for joining Aerodrome</h1>
+    <main>
+        <h2>Here's your membership information</h2>
+        <p><strong>First Name:</strong> <span id="first-name"></span></p>
+        <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Mobile number:</strong> <span id="mobile"></span></p>
+        <p><strong>Business name:</strong> <span id="business-name"></span></p>
+        <p><strong>Current date:</strong> <span id="timestamp"></span></p>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chamber of Commerce | Strengthening Local Business Together</p>
+            <p>123 Commerce Street, Lekki, Lagos State, Nigeria</p>
+            <p>Contact us: <a href="mailto:info@chamber.com">info@chamber.com</a> | Phone: (234) 902 723 1243</p>
+            <p>Developed by Prince Dike for WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lastModified = new Date(document.lastModified);
+            document.getElementById("last-modified").textContent = lastModified.toDateString();
+
+            // Set current date for hidden input
+            const hiddenDateInput = document.getElementById("hidden-date");
+            hiddenDateInput.value = new Date().toISOString();
+            
+            // Animate membership cards on load
+            const cards = document.querySelectorAll('.membership-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }, index * 300);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("first-name").textContent = params.get("first-name");
+            document.getElementById("last-name").textContent = params.get("last-name");
+            document.getElementById("email").textContent = params.get("email");
+            document.getElementById("mobile").textContent = params.get("mobile");
+            document.getElementById("business-name").textContent = params.get("business-name");
+            document.getElementById("timestamp").textContent = new Date(params.get("timestamp")).toLocaleString();
+        });
+    </script>
+    <script src="scripts/thankyou.js"></script> <!-- Linking the external JavaScript file -->
+</body>
+</html>
