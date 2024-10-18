@@ -1,0 +1,135 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.highlight {
+    color: #6A0DAD; /* Purple highlight */
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #d9a9fb;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+#color-schema p, #typography p {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 5px solid #6A0DAD;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #6A0DAD;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
