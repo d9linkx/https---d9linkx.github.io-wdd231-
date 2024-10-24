@@ -1245,6 +1245,68 @@ main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
+
+/* General Styling for h3 and p */
+.gallery .attraction h3 {
+  font-size: 1.5rem;
+  color: #333; /* Dark text for visibility */
+  margin-top: 1rem; /* Space above the heading */
+  font-weight: 600; /* Bold */
+  text-align: center; /* Center align for aesthetics */
+}
+
+.gallery .attraction p {
+  font-size: 1rem;
+  color: #666; /* Slightly lighter than h3 text */
+  margin-top: 0.5rem; /* Space between the heading and paragraph */
+  line-height: 1.5; /* Improve readability */
+  text-align: center; /* Center align to match the headings */
+  max-width: 90%; /* Prevent paragraph text from spreading too wide */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop-specific styling */
+@media (min-width: 768px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    grid-gap: 20px; /* Space between the attraction items */
+  }
+
+  .gallery .attraction h3 {
+    font-size: 0.9rem; /* Larger font for desktops */
+    margin-top: 1.5rem;
+  }
+
+  .gallery .attraction p {
+    font-size: 1.1rem; /* Slightly larger paragraphs */
+    max-width: 80%; /* Adjust the paragraph width for larger screens */
+    margin-right: calc(1rem + 5px); /* Adds both fixed and relative spacing */
+    margin-left: calc(-1rem);
+  }
+}
+
+/* Mobile-specific styling */
+@media (max-width: 767px) {
+  .gallery {
+    display: block; /* Stack the attractions vertically */
+  }
+
+  .gallery .attraction h3 {
+    font-size: 1.3rem; /* Slightly smaller for mobile */
+    margin-top: 1rem;
+  }
+
+  .gallery .attraction p {
+    font-size: 0.9rem; /* Smaller paragraphs for mobile */
+    max-width: 95%; /* Full width on mobile */
+    margin-right: calc(1rem + 5px); /* Adds both fixed and relative spacing */
+    margin-left: calc(-1rem);
+  }
+}
+
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .sidebar {
