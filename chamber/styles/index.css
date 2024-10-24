@@ -1157,3 +1157,106 @@ footer a {
 footer a:hover {
   color: #ffffff; /* White on hover for simple contrast */
 }
+
+
+
+/*Discover Page*/
+
+/* Main container styling */
+main {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 30%; /* Changed for better balance */
+  padding: 20px;
+  background-color: #ffffff; /* White background for sidebar */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* More rounded corners */
+  margin-right: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.sidebar h2 {
+  font-size: 1.6em; /* Slightly larger font */
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #0288D1; /* Underline for emphasis */
+  padding-bottom: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 8px 0; /* Increased margin for better spacing */
+  color: #555;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* More rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Main content heading */
+.main-content h2 {
+  font-size: 1.6em; /* Consistent with sidebar */
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #0288D1; /* Underline for emphasis */
+  padding-bottom: 5px;
+}
+
+/* Gallery styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px; /* Increased gap for better spacing */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add shadow transition */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .sidebar {
+      width: 40%; /* Adjust for medium screens */
+      margin-right: 10px; /* Reduce margin */
+  }
+
+  .main-content {
+      width: 55%; /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%; /* Full width on small screens */
+      margin-right: 0;
+      margin-bottom: 20px; /* Space between sections */
+  }
+
+  .main-content {
+      width: 100%; /* Full width on small screens */
+  }
+}

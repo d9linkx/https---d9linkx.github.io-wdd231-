@@ -7,6 +7,14 @@ window.onload = function () {
         mobile_menu.classList.toggle('is-active');
     });
 
+
+
+
+
+    
+
+
+
     // Fetch the JSON data
     fetch('data/member.json')
     .then(response => response.json())
@@ -103,3 +111,71 @@ window.onload = function () {
     getWeather();
     getForecast();
 }
+
+
+// Check for the last visit date in localStorage
+const lastVisitKey = 'lastVisit';
+const visitMessageElement = document.getElementById('visit-message');
+
+// Function to calculate days between two dates
+function calculateDaysBetween(date1, date2) {
+    const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    return Math.round(Math.abs((date2 - date1) / oneDay));
+}
+
+// Function to display visit message
+function displayVisitMessage() {
+    const lastVisit = localStorage.getItem(lastVisitKey);
+    const currentTime = Date.now();
+    
+    if (!lastVisit) {
+        // First visit
+        visitMessageElement.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const lastVisitDate = new Date(parseInt(lastVisit, 10));
+        const daysSinceLastVisit = calculateDaysBetween(lastVisitDate, new Date());
+
+        if (daysSinceLastVisit < 1) {
+            visitMessageElement.textContent = "Back so soon! Awesome!";
+        } else {
+            const dayText = daysSinceLastVisit === 1 ? "day" : "days";
+            visitMessageElement.textContent = `You last visited ${daysSinceLastVisit} ${dayText} ago.`;
+        }
+    }
+    
+    // Store the current visit date
+    localStorage.setItem(lastVisitKey, currentTime);
+}
+
+// Lazy loading images
+function lazyLoadImages() {
+    const images = document.querySelectorAll('.lazy');
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src; // Set the src to the data-src attribute
+                img.onload = () => {
+                    img.classList.remove('lazy'); // Remove lazy class after loading
+                };
+                observer.unobserve(img); // Stop observing this image
+            }
+        });
+    }, options);
+
+    images.forEach(img => {
+        imageObserver.observe(img); // Start observing each image
+    });
+}
+
+// Initialize functions on DOM content loaded
+document.addEventListener('DOMContentLoaded', () => {
+    displayVisitMessage();
+    lazyLoadImages();
+});

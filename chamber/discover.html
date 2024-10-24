@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aerodrome Chamber of Commerce">
+    <meta name="author" content="Prince Dike">
+    <title>Aerodrome Chamber of Commerce</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Settings for Facebook -->
+    <meta property="og:title" content="Aerodrome Chamber of Commerce Discover Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://d9linkx.github.io/wdd231/chamber/images/social-image.png">
+    <meta property="og:url" content="https://d9linkx.github.io/wdd231/chamber/directory.html">
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <!-- JavaScript for dynamic last modified date -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lastModified = new Date(document.lastModified);
+            document.getElementById("last-modified").textContent = lastModified.toDateString();
+        });
+    </script>
+</head>
+<body>
+    <!-- Hero area -->
+
+<!-- Header -->
+<header>
+    <div class="menus">
+        <a href="https://d9linkx.github.io/wdd231/chamber/index.html">
+            <img id="logo" src="images/aerodromelogo.png" alt="Aerodrome Chamber of Commerce Logo" width="45">
+        </a>
+    </div>
+    <div>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+        </button>
+    </div>
+    <nav class="menu-links" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Discover Us</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+</header>
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="discover.html">Discover</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
+</nav>
+
+
+<main>
+    <aside class="sidebar">
+        <div id="visit-message"></div>
+        <h2>Local Statistics</h2>
+        <ul>
+            <li>Population: 50,000</li>
+            <li>Average Age: 32</li>
+            <li>Annual Events: 15</li>
+        </ul>
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Annual Fair - March 5, 2024</li>
+            <li>Community Cleanup - April 20, 2024</li>
+            <li>Summer Festival - June 15, 2024</li>
+        </ul>
+    </aside>
+
+    <section class="main-content">
+        <h2>Local Attractions</h2>
+        <div class="gallery">
+            <img data-src="images/photo1.jpg" alt="Attraction 1" class="lazy" loading="lazy" />
+            <img data-src="images/photo2.jpg" alt="Attraction 2" class="lazy" loading="lazy" />
+            <img data-src="images/photo3.jpg" alt="Attraction 3" class="lazy" loading="lazy" />
+            <img data-src="images/photo4.jpg" alt="Attraction 4" class="lazy" loading="lazy" />
+            <img data-src="images/photo5.jpg" alt="Attraction 5" class="lazy" loading="lazy" />
+            <img data-src="images/photo6.jpg" alt="Attraction 6" class="lazy" loading="lazy" />
+        </div>
+    </section>
+</main>
+
+
+
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chamber of Commerce | Strengthening Local Business Together</p>
+            <p>123 Commerce Street, Lekki, Lagos State, Nigeria</p>
+            <p>Contact us: <a href="mailto:info@chamber.com">info@chamber.com</a> | Phone: (234) 902 723 1243</p>
+            <p>Developed by Prince Dike for WDD 231</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
+
+
+
