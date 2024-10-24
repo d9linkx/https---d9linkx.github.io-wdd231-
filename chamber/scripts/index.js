@@ -179,3 +179,5 @@ document.addEventListener('DOMContentLoaded', () => {
     displayVisitMessage();
     lazyLoadImages();
 });
+
+
