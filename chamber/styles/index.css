@@ -1430,3 +1430,9 @@ ul li a:focus {
   overflow: hidden;
   box-shadow: 0 px 8px rgba(0, 0, 0, 0.1);
 }
+
+iframe {
+  width: 100%; /* Make iframe responsive */
+  height: auto;
+  max-width: 100%; /* Ensures the iframe doesn't exceed container width */
+}
