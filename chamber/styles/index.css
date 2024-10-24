@@ -1179,7 +1179,7 @@ main {
 .sidebar {
   width: 30%; /* Changed for better balance */
   padding: 20px;
-  margin-top: 5.5rem;
+  margin-top: 0rem;
   background-color: #ffffff; /* White background for sidebar */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 8px; /* More rounded corners */
@@ -1435,4 +1435,20 @@ iframe {
   width: 100%; /* Make iframe responsive */
   height: auto;
   max-width: 100%; /* Ensures the iframe doesn't exceed container width */
+}
+
+
+.discover.h1 {
+  text-align: center; /* Center align the text */
+  font-size: 0.7em; /* Make the text larger */
+  font-family: 'Poppins', sans-serif; /* Ensure consistent font */
+  color: #ffffff; /* Set a dark color for contrast */
+  margin: 20px 0; /* Add some margin for spacing */
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.discover.h1 h1 {
+  font-weight: 700; /* Bold font */
+  letter-spacing: 1px; /* Slight spacing between letters */
 }
