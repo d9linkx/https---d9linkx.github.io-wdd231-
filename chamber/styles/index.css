@@ -1160,6 +1160,12 @@ footer a:hover {
 
 
 
+
+
+
+
+
+
 /*Discover Page*/
 
 /* Main container styling */
@@ -1178,6 +1184,7 @@ main {
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 8px; /* More rounded corners */
   margin-right: 20px;
+  font-size: 0.9rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
@@ -1187,17 +1194,63 @@ main {
   color: #333;
   border-bottom: 2px solid #0288D1; /* Underline for emphasis */
   padding-bottom: 5px;
+  margin-top: 2rem;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+
+
+/* General styles for the unordered list */
+ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
-.sidebar li {
-  margin: 8px 0; /* Increased margin for better spacing */
-  color: #555;
+/* Styles for each list item */
+ul li {
+  margin: 10px 0; /* Add vertical spacing between items */
 }
+
+/* Anchor tag styles for links */
+ul li a {
+  display: block; /* Ensure the link covers the whole list item area */
+  padding: 10px 15px; /* Add padding for clickable area */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.1rem; /* Increase font size slightly */
+  color: #333; /* Dark text color for better readability */
+  border-radius: 5px; /* Smooth rounded corners */
+  background-color: #f9f9f9; /* Subtle background for visual separation */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out; /* Smooth hover transitions */
+}
+
+/* Hover effect for better user interaction */
+ul li a:hover {
+  background-color: #0288D1; /* Change background to primary color */
+  color: #fff; /* Change text color to white */
+  transform: translateX(10px); /* Slight movement on hover */
+}
+
+/* Focus effect for accessibility */
+ul li a:focus {
+  outline: 2px solid #0288D1; /* Visible focus outline */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  ul li a {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      padding: 8px 10px; /* Adjust padding for better mobile experience */
+  }
+}
+
+/* Media query for desktop view */
+@media (min-width: 769px) {
+  ul li a {
+      font-size: 0.9rem; /* Slightly larger text on larger screens */
+      padding: 12px 10px; /* Increase padding for desktop */
+  }
+}
+
 
 /* Main content styling */
 .main-content {
@@ -1215,6 +1268,44 @@ main {
     margin-top: 5.5rem; /* Top margin for desktop */
   }
 }
+
+#weather-info {
+  background-color: #f8f9fa; /* Light background */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-top: 20px; /* Adds space above the weather section */
+  font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+#weather-info p {
+  font-size: 1.1rem; /* Adjusts font size */
+  margin: 10px 0; /* Space between the paragraphs */
+  color: #333; /* Darker text color for better readability */
+}
+
+@media (min-width: 768px) {
+  #weather-info {
+    padding: 20px;
+    margin-top: 25px;
+  }
+
+  #weather-info p {
+    font-size: 0.9rem; /* Slightly larger on larger screens */
+  }
+}
+
+#weather-info p:first-of-type {
+  font-weight: bold; /* Makes the first item (current temperature) bold */
+}
+
+#weather-info p::before {
+  content: "• "; /* Adds a bullet point before each weather stat */
+  color: #007bff; /* Blue color for the bullet */
+}
+
+
+
 
 /* Main content heading */
 .main-content h2 {
@@ -1256,7 +1347,7 @@ main {
 }
 
 .gallery .attraction p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666; /* Slightly lighter than h3 text */
   margin-top: 0.5rem; /* Space between the heading and paragraph */
   line-height: 1.5; /* Improve readability */
@@ -1280,10 +1371,10 @@ main {
   }
 
   .gallery .attraction p {
-    font-size: 1.1rem; /* Slightly larger paragraphs */
+    font-size: 0.9rem; /* Slightly larger paragraphs */
     max-width: 80%; /* Adjust the paragraph width for larger screens */
-    margin-right: calc(1rem + 5px); /* Adds both fixed and relative spacing */
-    margin-left: calc(-1rem);
+    margin: 0rem; /* Adds both fixed and relative spacing */
+    margin-left:;
   }
 }
 
@@ -1299,7 +1390,7 @@ main {
   }
 
   .gallery .attraction p {
-    font-size: 0.9rem; /* Smaller paragraphs for mobile */
+    font-size: 0.8rem; /* Smaller paragraphs for mobile */
     max-width: 95%; /* Full width on mobile */
     margin-right: calc(1rem + 5px); /* Adds both fixed and relative spacing */
     margin-left: calc(-1rem);
@@ -1329,4 +1420,14 @@ main {
   .main-content {
       width: 100%; /* Full width on small screens */
   }
+}
+
+
+
+.map-container {
+  margin-top: 10px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 px 8px rgba(0, 0, 0, 0.1);
 }

@@ -181,3 +181,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Dynamically update upcoming events based on the current date
+function displayUpcomingEvents() {
+    const events = [
+        { name: 'Annual Fair', date: '2024-03-05' },
+        { name: 'Community Cleanup', date: '2024-04-20' },
+        { name: 'Summer Festival', date: '2024-06-15' },
+        { name: 'Music Concert', date: '2024-07-10' },
+        { name: 'Art Expo', date: '2024-09-02' }
+    ];
+
+    const today = new Date();
+    const eventList = document.getElementById('upcoming-events');
+
+    events.forEach(event => {
+        const eventDate = new Date(event.date);
+        if (eventDate > today) {
+            const li = document.createElement('li');
+            li.textContent = `${event.name} - ${eventDate.toLocaleDateString()}`;
+            eventList.appendChild(li);
+        }
+    });
+}
+
+// Display Google Map dynamically
+function displayMap() {
+    const mapContainer = document.querySelector('.map-container');
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.328042636457!2d-122.41941548518202!3d37.77492927975986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085816d71b60a53%3A0xb10d29b7cf74f18d!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1605159634245!5m2!1sen!2sin";
+    iframe.width = "100%";
+    iframe.height = "300";
+    iframe.style.border = "0";
+    iframe.allowFullscreen = true;
+    iframe.loading = "lazy";
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+
+    mapContainer.appendChild(iframe);
+}
+
+// Run functions when the page loads
+window.addEventListener('load', () => {
+    fetchWeather();
+    displayUpcomingEvents();
+    displayMap();
+});
