@@ -1374,7 +1374,6 @@ ul li a:focus {
     font-size: 0.9rem; /* Slightly larger paragraphs */
     max-width: 80%; /* Adjust the paragraph width for larger screens */
     margin: 0rem; /* Adds both fixed and relative spacing */
-    margin-left:;
   }
 }
 
