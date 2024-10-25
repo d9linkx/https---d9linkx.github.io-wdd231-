@@ -271,3 +271,42 @@ color: #eee;
 background-color: #eee; /* Yellow button for attention */
 color: #005b9a;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #005b9a; /* Darker blue for contrast */
+    color: white;
+    text-align: center;
+    padding: 2rem 3rem; /* More padding for a call to action section */
+    margin: -3rem;
+    margin-left: -2rem;
+    margin-right: 0rem;
+  }
+  
+  footer .container p {
+  font-size: 16px; /* or any size you prefer */
+  }
+  
+  footer a {
+    color: #ffd700; /* High contrast yellow for links */
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #ffffff; /* White on hover for simple contrast */
+  }
+  
