@@ -319,6 +319,45 @@ h2 {
 }
 
 
+/* Left section with hero background */
+.left-section {
+    width: 100%; /* Full width for mobile */
+    padding: 20px; /* Padding for mobile */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    position: relative;
+    color: rgb(190, 80, 80); /* Text color for readability */
+    z-index: 1;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .left-section {
+        height: 100vh; /* Make the left section full height */
+        padding: 40px 20px; /* Adjust padding for mobile */
+    }
+
+    .hero-text {
+        text-align: center; /* Center text on mobile */
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+        gap: 10px; /* Space between buttons */
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center; /* Center social icons */
+        gap: 10px; /* Space between icons */
+    }
+}
+
+
 /* Social icons styling */
 .social-icons {
     display: flex;
