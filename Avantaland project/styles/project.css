@@ -40,6 +40,15 @@ header {
     height: 13vh;
 }
 
+.menus {
+    text-align: center; /* Center the logo horizontally */
+}
+
+#logo {
+    display: block; /* Ensures the logo behaves like a block element */
+    margin-top: 5px; /* Adjust this value to move the logo down */
+}
+
 ul li {
     display: inline;
     margin-right: 15px;
@@ -70,7 +79,7 @@ ul li a:hover {
     display: block;
     width: 100%;
     height: 5px;
-    background-color: #FFF;
+    background-color: #db4a2b;
     margin: 6px 0px;
     transition: 0.5s;
 }
@@ -213,66 +222,179 @@ h2 {
 }
 
 
-
-/* Hero Section */
-
-.hero-image {
-  background-image: linear-gradient(rgba(49, 122, 190, 0.7), rgba(0, 0, 0, 0.7)), url("../images/heroimage.jpg");
-  background-position: right center; /* Adjusted to push the image to the left */
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  object-fit: cover;
-  box-sizing: border-box;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Container for left and right sections */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left section with hero background */
+.left-section {
+    width: 60%;
+    padding: 20px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #db4a2b; /* Text color for readability on hero image */
+    z-index: 1;
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 1024px) {
+    .left-section {
+        width: 60%;
+        height: 100vh; /* Full viewport height */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        background-color: #f5f5f5; /* Set a background color */
+        background-image: radial-gradient(circle, #cccccc 2%, transparent 2%);
+        background-size: 20px 20px; /* Adjust size to control spiral spacing */
+        color: #db4a2b; /* Adjust text color for readability */
+    }
+}
+
+/* Adjust text alignment */
 .hero-text {
-  text-align: center;
-  color: white;
-  padding: 2rem; /* Add padding to the hero-text div */
+    width: 80%;
+    text-align: left;
+    padding: 20px 20px;
+    margin: 0;
 }
 
-h1 {
-  margin-bottom: 1rem; /* Increase margin between h1 and p */
-}
-
-p {
-  margin-bottom: 2rem; /* Increase margin between p and a */
-}
-
-
-@media (min-width: 768px) {
-  .hero-text {
-      text-align: center;
-      color: white;
-      margin: 8rem;
-  }
-}
-
-.hero-text a {
-  padding: 10px 20px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 30px;
-}
-
-.hero-text .hero-btn {
-background-color: #5190bc;
-color: #eee;
-}
-
-.hero-text .hero-btn:hover {
-background-color: #eee; /* Yellow button for attention */
-color: #005b9a;
+/* Ensure buttons and other content align left */
+.hero-buttons,
+.social-icons {
+    justify-content: flex-start;
 }
 
 
+
+
+/* Center the hero text and buttons on the image */
+.hero-text, .hero-buttons, .social-icons {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero text styling */
+.hero-text {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Hero buttons styling */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #003914;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon i {
+    font-size: 1.5em;
+    color: #db4a2b;
+}
+
+/* Right sidebar */
+.sidebar {
+    width: 40%;
+    background-color: #ececec;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-section, .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+    .left-section {
+        background-position: center top;
+        background-size: cover;
+        height: 600px;
+    }
+}
+
+
+/* Right sidebar */
+.sidebar {
+    width: 40%;
+    background-color: #ececec;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-updates, .events-updates, .partners-logos {
+    margin-bottom: 20px;
+}
+
+.partner-logo {
+    width: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-section, .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+    .background-image {
+        position: relative;
+        width: 100%;
+        height: 120px;
+    }
+}
 
 
 
@@ -288,7 +410,7 @@ color: #005b9a;
 
 
 footer {
-    background-color: #005b9a; /* Darker blue for contrast */
+    background-color: #F5F5F5; /* Darker blue for contrast */
     color: white;
     text-align: center;
     padding: 2rem 3rem; /* More padding for a call to action section */
