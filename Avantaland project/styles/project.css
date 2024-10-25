@@ -272,13 +272,6 @@ h2 {
     }
 }
 
-/* Adjust text alignment */
-.hero-text {
-    width: 80%;
-    text-align: left;
-    padding: 20px 20px;
-    margin: 0;
-}
 
 /* Ensure buttons and other content align left */
 .hero-buttons,
@@ -298,24 +291,33 @@ h2 {
 /* Hero text styling */
 .hero-text {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* Hero buttons styling */
 .hero-buttons {
-    display: flex;
+    display: row;
     gap: 15px;
     margin-bottom: 20px;
 }
 
 .cta-button {
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #003914;
+    padding: 10px 10px;
+    color: #000000; /* Text color */
+    background-color: #ffffff; /* Button background color */
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border: 2px solid #6e6d6d; /* Set the border thickness and color */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Optional: for hover effects */
 }
+
+/* Optional: Add hover effect */
+.cta-button:hover {
+    background-color: #000000; /* Change background on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
 
 /* Social icons styling */
 .social-icons {
@@ -344,7 +346,7 @@ h2 {
         flex-direction: column;
     }
     .left-section, .sidebar {
-        width: 100%;
+        width: 0%;
         padding: 15px;
     }
     .left-section {
