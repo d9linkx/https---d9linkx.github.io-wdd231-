@@ -299,6 +299,7 @@ h2 {
     margin-right: 2rem;
 }
 
+
 .cta-button {
     width: 100%; /* Make the button take the full width of its container */
     padding: 7px 30px;
@@ -466,9 +467,243 @@ h2 {
 
 
 
+/* Headings */
+.sidebar h2 {
+    font-size: 0.8rem;
+    color: #db4a2b;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ececec;
+    padding-bottom: 5px;
+}
+
+/* Updates container */
+.news-updates, .events-updates {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraphs */
+.news-updates p, .events-updates p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5em;
+    margin: 10px 0;
+}
+
+/* Hover effect on update items */
+.news-updates p:hover, .events-updates p:hover {
+    color: #db4a2b;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+
+    .sidebar h2 {
+        font-size: 1em;
+    }
+
+    .news-updates p, .events-updates p {
+        font-size: 0.7em;
+    }
+}
 
 
 
+/* Card styling for sections */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px; /* Increased horizontal padding for better spacing */
+    margin: 20px auto;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Headings */
+h2 {
+    font-size: 2em;
+    color: #db4a2b;
+    margin-bottom: 15px; /* Adjusted bottom margin for consistency */
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Ensures headings are left-aligned */
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #db4a2b;
+    margin: 0 auto;
+    margin-top: 10px;
+    transition: width 0.3s ease;
+}
+
+h2:hover::after {
+    width: 80px;
+}
+
+/* Paragraph and List Item Styling */
+p {
+    margin: 15px 10; /* Consistent vertical margin for paragraphs */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+ul {
+    padding-left: 20px; /* Indent list items */
+}
+
+ul li {
+    margin: 10px 0; /* Space between list items */
+}
+
+/* Animated Section Content */
+p, ul li {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Features Section Styling */
+#features h2 {
+    font-size: 2.5em;
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Call-to-Action Section */
+#call-to-action p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 0px;
+    font-size: 1em;
+    background-color: #db4a2b;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Makes the button block-level for easier clicking */
+    margin-top: 10px; /* Space between paragraph and button */
+    margin-bottom: 2rem;
+}
+
+.cta-button:hover {
+    background-color: #b53d24;
+}
+
+/* Testimonials Carousel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel h3 {
+    color: #db4a2b;
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-align: center; /* Ensure titles are left-aligned */
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f8f8f8;
+    opacity: 0.9;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+/* Carousel Navigation */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.cta-button {
+    margin: 5px; /* Space between buttons */
+}
+
+
+/* Styled List for Row Layout */
+.styled-list {
+    display: flex; /* Sets items in a row */
+    flex-wrap: wrap; /* Allows items to wrap to next line on smaller screens */
+    gap: 15px; /* Adds spacing between list items */
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Custom Bullet Points */
+.styled-list li::before {
+    content: "✓"; /* Custom bullet */
+    color: #db4a2b; /* Color of the bullet */
+}
+
+.styled-list li {
+    position: relative; /* Positions the pseudo-elements */
+    padding-left: -5px; /* Space for custom bullet */
+    margin: 10px 0; /* Space between list items */
+    line-height: 1.5; /* Improved line height for readability */
+}
 
 
 
