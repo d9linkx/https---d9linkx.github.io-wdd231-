@@ -274,9 +274,10 @@ h2 {
 /* Hero text styling */
 .hero-text {
     text-align: left;
-    margin-top: -7rem;
+    margin-top: 4.5rem;
     margin-left: 0rem;
     margin-right: 1.5rem;
+    padding: 3rem;
 }
 
 .hero-text h1 {
@@ -292,7 +293,7 @@ h2 {
     gap: 15px;
     max-width: 200px;
     margin-bottom: 2rem;
-    margin-top: -2rem;
+    margin-top: -4rem;
     text-align: center;
     margin-right: 2rem;
 }
