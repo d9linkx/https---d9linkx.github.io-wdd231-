@@ -8,3 +8,14 @@ window.onload = function () {
     });
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleButton = document.getElementById('sidebarToggle');
+    const sidebarContent = document.querySelector('.sidebar-content');
+
+    toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        sidebarContent.classList.toggle('active');
+    });
+});
