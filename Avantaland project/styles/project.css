@@ -277,11 +277,11 @@ h2 {
     margin-top: 4.5rem;
     margin-left: 0rem;
     margin-right: 1.5rem;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .hero-text h1 {
-    font-size: 33px; /* Adjust the font size as needed */
+    font-size: 30px; /* Adjust the font size as needed */
     letter-spacing: -0.5px; /* Adjust the letter spacing */
     color: #333; /* Optional: Change the text color */
     margin-bottom: 1rem; /* Optional: Adjust the margin */
