@@ -776,50 +776,72 @@ footer {
 
 
 
-/* Sidebar for Desktop */
-@media (min-width: 769px) {
+/* Desktop-specific styles */
+@media (min-width: 768px) {
+    main {
+      display: flex;
+      flex-wrap: wrap; /* Allow cards to wrap to a new row if needed */
+      justify-content: space-between; /* Space cards evenly */
+    }
+  
+    .card {
+      flex: 1;
+      min-width: 300px; /* Ensure cards have a minimum width */
+      max-width: 400px; /* Limit card width to prevent overflow */
+      margin: 10px; /* Add spacing between cards */
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+  }
+
+  /* Desktop-specific styles */
+@media (min-width: 768px) {
+    #testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .testimonial-container {
+      flex: 1;
+      margin: 10px;
+    }
+  
+    .carousel {
+      width: 100%;
+    }
+  
+    .carousel-item {
+      /* Adjust image size and text layout as needed */
+      /* For example: */
+      img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+/* Sidebar styling */
+
+
+/* Adjust the left section to accommodate the sidebar */
+@media (min-width: 1024px) {
+    .left-section {
+        width: 70%; /* Adjust the width to accommodate the sidebar */
+    }
+
     .sidebar {
-        position: fixed;
-        right: -300px;
-        top: 0;
-        height: 100%;
+        position: relative; /* Removed fixed positioning */
+        width: 30%; /* Adjust the width as needed */
+        height: auto; /* Let the content determine the height */
         background-color: #f4f4f4;
-        box-shadow: -2px 0 5px rgba(176, 176, 176, 0.5);
-        transition: right 0.3s ease;
-        z-index: 1000;
+        box-shadow: -2px 0 5px rgba(176, 176, 176, 0);
+        padding: 20px; /* Add padding for better spacing */
     }
-
-    .sidebar-toggle {
-        position: fixed;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #db4a2b;
-        color: #fff;
-        padding: 10px 8px;
-        cursor: pointer;
-        z-index: 1000;
-    }
-}
-
-/* Social Icons for Desktop */
-.social-icons {
-    display: flex;
-    margin-right: 2rem;
-    gap: 5px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-    color: #db4a2b;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #3b3b3b;
-    transform: scale(1.1);
 }
