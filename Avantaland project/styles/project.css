@@ -55,12 +55,12 @@ ul li {
 }
 
 ul li a {
-    color: #ffffff; /* Lighter text for readability */
+    color: #000000; /* Lighter text for readability */
     text-decoration: none;
 }
 
 ul li a:hover {
-    color: #ffcc00; /* Yellow on hover for high contrast */
+    color: #0091ff; /* Yellow on hover for high contrast */
 }
 
 .hamburger {
@@ -104,7 +104,7 @@ ul li a:hover {
     min-height: 100vh;
     display: block;
     z-index: 98;
-    background-color: #003366; color: #ffffff;
+    background-color: #efefef; color: #ffffff;
     padding-top: 120px;
     transition: 0.4s;
 }
@@ -123,7 +123,7 @@ ul li a:hover {
     text-align: center;
     margin-bottom: 16px;
     padding: 12px 16px;
-    background-color: #1270b3;
+    background-color: #db4a2b;
 
     color: white;
     text-decoration: none;
@@ -131,7 +131,7 @@ ul li a:hover {
 
 
 .mobile-nav a:hover {
-    background-color: #336699; color: #ffffff;
+    background-color: #3b3b3b; color: #ffffff;
     color: #ffffff;
 }
 
@@ -139,6 +139,7 @@ ul li a:hover {
 @media (max-width: 768px) {
     .mobile-nav {
         display: block; /* Show the mobile navigation */
+        left: 100%; /* Ensure it starts off-screen */
     }
 
     .hamburger {
@@ -151,9 +152,9 @@ ul li a:hover {
 }
 
 /* Tablet/Desktop view */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .mobile-nav {
-        display: none; /* Show the navigation on larger screens */
+        display: none; /* Hide the mobile navigation */
     }
 
     .hamburger {
@@ -161,19 +162,11 @@ ul li a:hover {
     }
 }
 
-/* Hide navigation links on mobile */
-
-@media (max-width: 768px) {
-    .mobile-nav2 {
-        display: none; /* Show the navigation on larger screens */
-    }
+/* Toggle active state */
+.mobile-nav.is-active {
+    left: 0; /* Move the mobile nav into view */
 }
 
-@media (min-width: 768px) {
-    .mobile-nav {
-        display: none; /* Hide on screens smaller than 768px */
-    }
-}
 
 /* Wayfinding effect: style for the active link */
 .nav-links {
@@ -218,23 +211,12 @@ nav ul li a:hover {
 h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333; /* Dark text for good contrast */
+  color: #000000; /* Dark text for good contrast */
 }
 
 
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Container for left and right sections */
-.container {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-}
+
 
 /* Left section with hero background */
 .left-section {
@@ -286,35 +268,54 @@ h2 {
 .hero-text, .hero-buttons, .social-icons {
     position: relative;
     z-index: 2;
+    
 }
 
 /* Hero text styling */
 .hero-text {
-    text-align: center;
-    padding: 1rem;
+    text-align: left;
+    margin-top: -7rem;
+    margin-left: 0rem;
+    margin-right: 1.5rem;
 }
+
+.hero-text h1 {
+    font-size: 33px; /* Adjust the font size as needed */
+    letter-spacing: -0.5px; /* Adjust the letter spacing */
+    color: #333; /* Optional: Change the text color */
+    margin-bottom: 1rem; /* Optional: Adjust the margin */
+}
+
 
 /* Hero buttons styling */
 .hero-buttons {
-    display: row;
     gap: 15px;
-    margin-bottom: 20px;
+    max-width: 200px;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+    text-align: center;
+    margin-right: 2rem;
 }
 
 .cta-button {
-    padding: 10px 10px;
-    color: #000000; /* Text color */
-    background-color: #ffffff; /* Button background color */
+    width: 100%; /* Make the button take the full width of its container */
+    padding: 7px 30px;
+    color: #ffffff; /* Text color */
+    background-color: #db4a2b; /* Button background color */
     text-decoration: none;
-    border: 2px solid #6e6d6d; /* Set the border thickness and color */
-    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #8a8a8a; /* Set the border thickness and color */
+    border-radius: 7px; /* Rounded corners */
     font-weight: bold; /* Bold text */
+    margin-top: 1rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem; /* Add space between buttons */
     transition: background-color 0.3s ease, color 0.3s ease; /* Optional: for hover effects */
 }
 
+
 /* Optional: Add hover effect */
 .cta-button:hover {
-    background-color: #000000; /* Change background on hover */
+    background-color: #3b3b3b; /* Change background on hover */
     color: #ffffff; /* Change text color on hover */
 }
 
@@ -328,7 +329,7 @@ h2 {
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
     position: relative;
-    color: rgb(190, 80, 80); /* Text color for readability */
+    color: rgb(66, 66, 66); /* Text color for readability */
     z-index: 1;
 }
 
@@ -358,17 +359,39 @@ h2 {
 }
 
 
-/* Social icons styling */
+/* Social Icons Container Styling */
 .social-icons {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    gap: 5px; /* Spacing between icons */
+    justify-content: center; /* Center align icons */
+    padding: 20px; /* Adds padding around the container */
 }
 
-.social-icon i {
-    font-size: 1.5em;
-    color: #db4a2b;
+/* Individual Icon Styling */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: #db4a2b; /* Icon color */
+    background-color: #33333300; /* Background color */
+    border-radius: 50%; /* Makes the icon circular */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2rem; /* Adjust icon size */
+    text-decoration: none;
 }
+
+/* Hover Effects */
+.social-icon:hover {
+    color: #3b3b3b; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly increase icon size on hover */
+}
+
+
+
 
 /* Right sidebar */
 .sidebar {
@@ -451,13 +474,14 @@ h2 {
 
 
 footer {
-    background-color: #F5F5F5; /* Darker blue for contrast */
+    background-color: #3b3b3b; /* Darker blue for contrast */
     color: white;
     text-align: center;
     padding: 2rem 3rem; /* More padding for a call to action section */
     margin: -3rem;
     margin-left: -2rem;
     margin-right: 0rem;
+    margin-top: 2rem;
   }
   
   footer .container p {
