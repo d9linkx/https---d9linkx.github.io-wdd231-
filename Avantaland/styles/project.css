@@ -810,7 +810,7 @@ footer {
     .hero-buttons {
         display: flex;
         gap: 20px; /* Adjust the gap as needed */
-        margin-top: 20px; /* Adjust the top margin as needed */
+        margin-top: -3rem; /* Adjust the top margin as needed */
       }
       
       .cta-button {
