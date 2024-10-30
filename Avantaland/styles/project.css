@@ -79,7 +79,7 @@ ul li a:hover {
     display: block;
     width: 100%;
     height: 5px;
-    background-color: #db4a2b;
+    background-color: #7e438b;
     margin: 6px 0px;
     transition: 0.5s;
 }
@@ -123,7 +123,7 @@ ul li a:hover {
     text-align: center;
     margin-bottom: 16px;
     padding: 12px 16px;
-    background-color: #db4a2b;
+    background-color: #7e438b;
 
     color: white;
     text-decoration: none;
@@ -220,52 +220,23 @@ h2 {
 
 /* Left section with hero background */
 .left-section {
-    width: 60%;
-    padding: 20px;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+    margin-top: rem;
+    width: 100%; /* Full width for mobile */
+    display: block;
+    align-items: center; /* Center items horizontally */
+    margin-left: 0rem;
+    justify-content: center; /* Center items vertically */
     background-color: #f5f5f5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #db4a2b; /* Text color for readability on hero image */
+    color: #7e438b; /* Text color for readability on hero image */
     z-index: 1;
 }
 
-/* Desktop-specific adjustments */
-@media (min-width: 1024px) {
-    .left-section {
-        width: 60%;
-        height: 100vh; /* Full viewport height */
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        position: relative;
-        background-color: #f5f5f5; /* Set a background color */
-        background-image: radial-gradient(circle, #cccccc 2%, transparent 2%);
-        background-size: 20px 20px; /* Adjust size to control spiral spacing */
-        color: #db4a2b; /* Adjust text color for readability */
-    }
-}
-
-
-/* Ensure buttons and other content align left */
-.hero-buttons,
-.social-icons {
-    justify-content: flex-start;
-}
-
-
-
 
 /* Center the hero text and buttons on the image */
-.hero-text, .hero-buttons, .social-icons {
+.hero-text, .social-icons {
     position: relative;
     z-index: 2;
     
@@ -281,60 +252,46 @@ h2 {
 }
 
 .hero-text h1 {
-    font-size: 30px; /* Adjust the font size as needed */
+    font-size: 25px; /* Adjust the font size as needed */
     letter-spacing: -0.5px; /* Adjust the letter spacing */
-    color: #333; /* Optional: Change the text color */
-    margin-top: -8rem;
-    margin-bottom: 1rem; /* Optional: Adjust the margin */
+    color: #4f4f4f; /* Optional: Change the text color */
+    margin-right: -2rem;
+    text-align: left;
+    margin-left: -2.5rem;
+    margin-top: 0rem;
 }
 
-
-/* Hero buttons styling */
-.hero-buttons {
-    gap: 15px;
-    max-width: 200px;
-    margin-bottom: 2rem;
-    margin-top: -4rem;
-    text-align: center;
-    margin-right: 2rem;
+.hero-text p {
+    font-size: 18px;
+    color: #626262;
+    text-align: left;
+    margin-right: 0rem;
+    margin-left: -4rem;
 }
 
 
 .cta-button {
     width: 100%; /* Make the button take the full width of its container */
-    padding: 7px 30px;
     color: #ffffff; /* Text color */
-    background-color: #db4a2b; /* Button background color */
+    background-color: #ffffff; /* Button background color */
     text-decoration: none;
-    border: 1px solid #8a8a8a; /* Set the border thickness and color */
+    border: 1px solid #7e438b; /* Set the border thickness and color */
     border-radius: 7px; /* Rounded corners */
     font-weight: bold; /* Bold text */
-    margin-top: 1rem;
-    margin-top: 1rem;
-    margin-bottom: -1rem; /* Add space between buttons */
     transition: background-color 0.3s ease, color 0.3s ease; /* Optional: for hover effects */
 }
 
-
-/* Optional: Add hover effect */
-.cta-button:hover {
-    background-color: #3b3b3b; /* Change background on hover */
-    color: #ffffff; /* Change text color on hover */
+.hero-buttons {
+    display: flex; /* Stack buttons vertically */
+    flex-direction: column;
+    margin-left: auto; /* Shift buttons to the left */
+    gap: 2px;  /* Adjust gap between buttons */
+    padding: px 10px; /* Adjust padding as needed */
+    margin-right: 3rem;
+    margin-left: 0.5rem;
+    margin-top: -2rem;
 }
 
-
-/* Left section with hero background */
-.left-section {
-    width: 100%; /* Full width for mobile */
-    padding: 20px; /* Padding for mobile */
-    display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    position: relative;
-    color: rgb(66, 66, 66); /* Text color for readability */
-    z-index: 1;
-}
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
@@ -345,13 +302,6 @@ h2 {
 
     .hero-text {
         text-align: center; /* Center text on mobile */
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons */
-        gap: 10px; /* Space between buttons */
     }
 
     .social-icons {
@@ -379,7 +329,7 @@ h2 {
     justify-content: center;
     width: 20px;
     height: 20px;
-    color: #db4a2b; /* Icon color */
+    color: #7e438b; /* Icon color */
     background-color: #33333300; /* Background color */
     border-radius: 50%; /* Makes the icon circular */
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -419,7 +369,7 @@ h2 {
     right: 10;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #db4a2b;
+    background-color: #7e438b;
     color: #fff;
     border-radius: -1rem;
     padding: 10px 8px;
@@ -470,7 +420,7 @@ h2 {
 /* Headings */
 .sidebar h2 {
     font-size: 0.8rem;
-    color: #db4a2b;
+    color: #7e438b;
     margin-bottom: 15px;
     border-bottom: 2px solid #ececec;
     padding-bottom: 5px;
@@ -495,7 +445,7 @@ h2 {
 
 /* Hover effect on update items */
 .news-updates p:hover, .events-updates p:hover {
-    color: #db4a2b;
+    color: #7e438b;
     cursor: pointer;
 }
 
@@ -532,7 +482,7 @@ h2 {
 /* Headings */
 h2 {
     font-size: 2em;
-    color: #db4a2b;
+    color: #7e438b;
     margin-bottom: 15px; /* Adjusted bottom margin for consistency */
     position: relative;
     overflow: hidden;
@@ -544,7 +494,7 @@ h2::after {
     display: block;
     width: 50px;
     height: 2px;
-    background-color: #db4a2b;
+    background-color: #7e438b;
     margin: 0 auto;
     margin-top: 10px;
     transition: width 0.3s ease;
@@ -599,8 +549,9 @@ p, ul li {
 
 .cta-button {
     padding: 10px 0px;
+    margin-left: 4rem;
     font-size: 1em;
-    background-color: #db4a2b;
+    background-color: #7e438b;
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -609,10 +560,13 @@ p, ul li {
     display: inline-block; /* Makes the button block-level for easier clicking */
     margin-top: 10px; /* Space between paragraph and button */
     margin-bottom: 2rem;
+    margin: 5px; /* Space between buttons */
+    margin-left: -0rem;
 }
 
+
 .cta-button:hover {
-    background-color: #b53d24;
+    background-color: #4f3555;
 }
 
 /* Testimonials Carousel */
@@ -626,7 +580,7 @@ p, ul li {
 }
 
 .carousel h3 {
-    color: #db4a2b;
+    color: #7e438b;
     font-size: 1em;
     margin-bottom: 15px;
     text-align: center; /* Ensure titles are left-aligned */
@@ -677,10 +631,6 @@ p, ul li {
     object-fit: cover;
 }
 
-.cta-button {
-    margin: 5px; /* Space between buttons */
-}
-
 
 /* Styled List for Row Layout */
 .styled-list {
@@ -695,7 +645,7 @@ p, ul li {
 /* Custom Bullet Points */
 .styled-list li::before {
     content: "✓"; /* Custom bullet */
-    color: #db4a2b; /* Color of the bullet */
+    color: #7e438b; /* Color of the bullet */
 }
 
 .styled-list li {
@@ -709,14 +659,10 @@ p, ul li {
 
 
 footer {
-    background-color: #3b3b3b; /* Darker blue for contrast */
+    background-color: #7e438b; /* Darker blue for contrast */
     color: white;
     text-align: center;
-    padding: 2rem 3rem; /* More padding for a call to action section */
-    margin: -3rem;
-    margin-left: -2rem;
-    margin-right: 0rem;
-    margin-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   footer .container p {
@@ -791,8 +737,7 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 4rem;
-        font-weight: bold;
+        font-size: 3rem;
         margin-top: 2rem;
         color: #333;
         margin-bottom: 2rem;
@@ -809,22 +754,31 @@ footer {
 
     .hero-buttons {
         display: flex;
-        gap: 20px; /* Adjust the gap as needed */
+        max-width: 100%;
+        margin-left: 2.7rem;
+        gap: 5px; /* Adjust the gap as needed */
         margin-top: -3rem; /* Adjust the top margin as needed */
       }
       
       .cta-button {
-        background-color: #db4a2b;
-        color: #fff;
-        padding: 15px 30px;
+        padding: 10px 0px;
+        margin-left: 4rem;
+        font-size: 1em;
+        background-color: #7e438b;
+        color: white;
+        text-align: center;
         border-radius: 5px;
         text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease-in-out;
-      }
+        transition: background-color 0.3s ease;
+        display: inline-block; /* Makes the button block-level for easier clicking */
+        margin-top: 10px; /* Space between paragraph and button */
+        margin-bottom: 2rem;
+        margin: 5px; /* Space between buttons */
+        margin-left: -0rem;
+    }
       
       .cta-button:hover {
-        background-color: #b63724;
+        background-color: #4f3555;
       }
 
     /* ... rest of your button styles ... */
@@ -840,7 +794,7 @@ footer {
 
     /* Right Sidebar */
     .sidebar {
-        position: fixed;
+        position: relative;
         top: 0;
         right: 0;
         width: 30%;
@@ -861,7 +815,7 @@ footer {
         right: -30px;
         top: 50%;
         transform: translateY(-50%);
-        background-color: #db4a2b;
+        background-color: #7e438b;
         color: #fff;
         padding: 8px;
         cursor: pointer;
@@ -873,7 +827,7 @@ footer {
     }
 
     .sidebar-toggle:hover {
-        background-color: #b63724;
+        background-color: #7e438b;
     }
 
     /* Sidebar content */
@@ -898,8 +852,6 @@ footer {
     .sidebar-content .events-updates p {
         margin: 10px 0;
     }
-}
-
 
 /* Desktop-specific styling for card layout */
 @media (min-width: 769px) {
@@ -964,121 +916,13 @@ footer {
 
     #features h2 {
         font-size: 2em;
-        color: #db4a2b;
+        color: #7e438b;
         margin-bottom: 10px;
     }
 }
 
 
 
-/* Main content container for flex layout */
-.content-container {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 4rem;
-}
 
-/* Left Section (Hero Section) */
-.left-section {
-    position: relative;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    overflow: hidden;
-}
-
-/* Background image styling */
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('path/to/your/background-image.jpg'); /* replace with actual path */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: 1;
-}
-
-/* Hero Image and Text */
-.hero-image {
-    position: relative;
-    z-index: 2;
-    padding: 40px;
-}
-
-.hero-text h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 1.2em;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Hero buttons styling */
-.hero-buttons {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.hero-buttons .cta-button {
-    background-color: #db4a2b;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.hero-buttons .cta-button:hover {
-    background-color: #b63724;
-}
-
-/* Social icons styling */
-.social-icons {
-    margin-top: 30px;
-    display: flex;
-    gap: 10px;
-}
-
-.social-icons .social-icon {
-    color: #666;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.social-icons .social-icon:hover {
-    color: #db4a2b;
-}
-
-/* Right Sidebar */
-.sidebar {
-    position: relative;
-    width: 30%;
-    background-color: #f8f8f8;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin-top: 4rem;
-    z-index: 2;
-}
-
-/* Responsive Styling for Desktop View */
-@media (min-width: 1024px) {
-    .content-container {
-        flex-direction: row;
-    }
-}
 
 
