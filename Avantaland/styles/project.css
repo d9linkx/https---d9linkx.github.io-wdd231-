@@ -743,105 +743,342 @@ footer {
 
 
 
+/*           DESKTOP VIEW SETTING           */
 
 
 
 
 
 
-/* Tablet/Desktop Menu */
+
+
+
+
+/* Desktop-specific styling */
 @media (min-width: 769px) {
-    .mobile-nav, .hamburger {
-        display: none;
-    }
-}
-
-
-
-/* Desktop Left Section */
-@media (min-width: 1024px) {
-    .left-section {
-        width: 60%;
+    /* General container styling */
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
         height: 100vh;
-        padding: 0;
+    }
+
+    /* Header */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        color: #333;
+        padding: 1rem;
+        box-sizing: border-box;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Left Section (Hero Section) */
+    .left-section {
+        position: relative;
+        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #f5f5f5;
-        background-image: radial-gradient(circle, #cccccc 2%, transparent 2%);
-        background-size: 20px 20px;
-        color: #db4a2b;
+        align-items: flex-start;
+        padding: 20px;
     }
-}
 
+    .hero-text h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        color: #333;
+        margin-bottom: 2rem;
+    }
 
+    .hero-text p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-left: -4.5rem;
+        color: #666;
+    }
 
-/* Desktop-specific styles */
-@media (min-width: 768px) {
-    main {
-      display: flex;
-      flex-wrap: wrap; /* Allow cards to wrap to a new row if needed */
-      justify-content: space-between; /* Space cards evenly */
-    }
-  
-    .card {
-      flex: 1;
-      min-width: 300px; /* Ensure cards have a minimum width */
-      max-width: 400px; /* Limit card width to prevent overflow */
-      margin: 10px; /* Add spacing between cards */
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-  }
+    /* Hero buttons styling */
 
-  /* Desktop-specific styles */
-@media (min-width: 768px) {
-    #testimonials {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  
-    .testimonial-container {
-      flex: 1;
-      margin: 10px;
-    }
-  
-    .carousel {
-      width: 100%;
-    }
-  
-    .carousel-item {
-      /* Adjust image size and text layout as needed */
-      /* For example: */
-      img {
-        max-width: 100px;
-        height: auto;
-        margin-bottom: 10px;
+    .hero-buttons {
+        display: flex;
+        gap: 20px; /* Adjust the gap as needed */
+        margin-top: 20px; /* Adjust the top margin as needed */
       }
-      p {
-        font-size: 16px;
+      
+      .cta-button {
+        background-color: #db4a2b;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
       }
+      
+      .cta-button:hover {
+        background-color: #b63724;
+      }
+
+    /* ... rest of your button styles ... */
+
+    /* Social icons styling */
+    .social-icons {
+        margin-top: 2rem;
+        display: flex;
+        gap: 10px;
     }
-  }
 
-/* Sidebar styling */
+    /* ... rest of your social icon styles ... */
 
-
-/* Adjust the left section to accommodate the sidebar */
-@media (min-width: 1024px) {
-    .left-section {
-        width: 70%; /* Adjust the width to accommodate the sidebar */
-    }
-
+    /* Right Sidebar */
     .sidebar {
-        position: relative; /* Removed fixed positioning */
-        width: 30%; /* Adjust the width as needed */
-        height: auto; /* Let the content determine the height */
-        background-color: #f4f4f4;
-        box-shadow: -2px 0 5px rgba(176, 176, 176, 0);
-        padding: 20px; /* Add padding for better spacing */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100vh;
+        background-color: #f8f8f8;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        z-index: 1000;
     }
 }
+    
+
+    /* Sidebar toggle button */
+    .sidebar-toggle {
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #db4a2b;
+        color: #fff;
+        padding: 8px;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        font-size: 1em;
+        z-index: 1001;
+        transition: background-color 0.3s;
+    }
+
+    .sidebar-toggle:hover {
+        background-color: #b63724;
+    }
+
+    /* Sidebar content */
+    .sidebar-content {
+        padding: 20px;
+    }
+
+    .sidebar-content h2 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .sidebar-content .news-updates,
+    .sidebar-content .events-updates {
+        margin-bottom: 20px;
+        font-size: 1em;
+        color: #555;
+    }
+
+    .sidebar-content .news-updates p,
+    .sidebar-content .events-updates p {
+        margin: 10px 0;
+    }
+}
+
+
+/* Desktop-specific styling for card layout */
+@media (min-width: 769px) {
+    /* Main layout for sections */
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    /* General card styling */
+    .card {
+        width: 48%; /* Two cards per line with a small margin */
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Heading styling */
+    .card h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    /* Paragraph styling */
+    .card p {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Styled list within each card */
+    .styled-list {
+        margin-top: 10px;
+        padding-left: 20px;
+        list-style-type: disc;
+        color: #444;
+    }
+
+    .styled-list li {
+        margin-bottom: 8px;
+        font-size: 1em;
+    }
+
+    /* Spacing for individual feature sections */
+    #features {
+        width: 100%; /* Make the first section full-width */
+        text-align: center;
+        background-color: #f4f4f4;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+
+    #features h2 {
+        font-size: 2em;
+        color: #db4a2b;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Main content container for flex layout */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 4rem;
+}
+
+/* Left Section (Hero Section) */
+.left-section {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/your/background-image.jpg'); /* replace with actual path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Hero Image and Text */
+.hero-image {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hero buttons styling */
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons .cta-button {
+    background-color: #db4a2b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons .cta-button:hover {
+    background-color: #b63724;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons .social-icon {
+    color: #666;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons .social-icon:hover {
+    color: #db4a2b;
+}
+
+/* Right Sidebar */
+.sidebar {
+    position: relative;
+    width: 30%;
+    background-color: #f8f8f8;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 4rem;
+    z-index: 2;
+}
+
+/* Responsive Styling for Desktop View */
+@media (min-width: 1024px) {
+    .content-container {
+        flex-direction: row;
+    }
+}
+
+
