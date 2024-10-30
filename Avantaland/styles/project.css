@@ -177,7 +177,6 @@ ul li a:hover {
     top: 60px; /* Adjust according to navbar height */
     left: 0;
     background-color: #000000; /* Same as navbar */
-    text-align: center;
     color: #040404;
     text-decoration: none;
     padding: 10px 5px;
@@ -198,12 +197,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #f0f0f0; /* Lighter text for readability */
+    color: #7e438b; /* Lighter text for readability */
     text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: #ffd700; /* Yellow on hover for high contrast */
+  color: #4f3555; /* Yellow on hover for high contrast */
 }
 
 
@@ -715,24 +714,38 @@ p, ul li {
 
 
 footer {
-    background-color: #7e438b; /* Darker blue for contrast */
-    color: white;
-    text-align: center;
-    padding-bottom: 2rem;
-  }
-  
-  footer .container p {
-  font-size: 16px; /* or any size you prefer */
-  }
-  
-  footer a {
-    color: #ffd700; /* High contrast yellow for links */
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    color: #ffffff; /* White on hover for simple contrast */
-  }
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer nav li {
+  display: inline-block;
+  margin-left: 1.7rem;
+}
+
+footer nav a {
+  color: #7e438b;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer nav a:hover {
+  color: #7e438b;
+}
+
+footer p {
+  font-size: 0.8em;
+  margin: 10px 0;
+
+  margin-left: -2rem;
+}
   
 
 
