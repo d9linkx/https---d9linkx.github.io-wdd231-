@@ -557,6 +557,21 @@ p, ul li {
     color: #fff; /* Ensure text color is white */
 }
 
+.card2 {
+    background-color: #7e438b; /* Purple background color */
+    color: #fff; /* White text color */
+    padding: 20px;
+    margin-left: 0.7rem;
+    margin-right: 0.6rem;
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.card2 h2,
+.card2 p {
+    color: #fff; /* Ensure text color is white */
+}
+
 .card2 .cta-button1 {
     background-color: #fff; /* White button background */
     color: #7e438b; /* Purple text color */
@@ -565,10 +580,30 @@ p, ul li {
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
-
 }
 
 .cta-button1 {
+    padding: 10px 0px;
+    margin-left: 4rem;
+    font-size: 1em;
+    background-color: #7e438b;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Makes the button block-level for easier clicking */
+    margin-top: 10px; /* Space between paragraph and button */
+    margin-bottom: 2rem;
+    margin: 5px; /* Space between buttons */
+    margin-left: -0rem;
+}
+
+.cta-button:hover {
+    background-color: #4f3555;
+}
+
+.cta-button {
     padding: 10px 0px;
     margin-left: 4rem;
     font-size: 1em;
