@@ -219,7 +219,6 @@ h2 {
 
 /* Left section with hero background */
 .left-section {
-    margin-top: rem;
     width: 100%; /* Full width for mobile */
     display: block;
     align-items: center; /* Center items horizontally */
