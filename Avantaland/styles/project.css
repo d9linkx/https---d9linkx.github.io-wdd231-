@@ -27,7 +27,7 @@ header {
     top: 0;
     width: 100%;
     background-color: #ffffff; color: #ffffff; /* Darker blue for better contrast */
-    color: white;
+    color: #000000;
     padding: 1rem;
     margin: 0;
     margin-left: 0rem;
@@ -55,7 +55,7 @@ ul li {
 }
 
 ul li a {
-    color: #000000; /* Lighter text for readability */
+    color: #333333; /* Lighter text for readability */
     text-decoration: none;
 }
 
@@ -79,7 +79,7 @@ ul li a:hover {
     display: block;
     width: 100%;
     height: 5px;
-    background-color: #7e438b;
+    background-color: #5c2e6f;
     margin: 6px 0px;
     transition: 0.5s;
 }
@@ -104,6 +104,7 @@ ul li a:hover {
     min-height: 100vh;
     display: block;
     z-index: 98;
+    color: #000000; /* High contrast */
     background-color: #efefef; color: #ffffff;
     padding-top: 120px;
     transition: 0.4s;
@@ -176,7 +177,7 @@ ul li a:hover {
     position: absolute;
     top: 60px; /* Adjust according to navbar height */
     left: 0;
-    background-color: #000000; /* Same as navbar */
+    background-color: #ffffff; /* Same as navbar */
     color: #040404;
     text-decoration: none;
     padding: 10px 5px;
@@ -286,10 +287,22 @@ h2 {
     margin-left: auto; /* Shift buttons to the left */
     gap: 2px;  /* Adjust gap between buttons */
     padding: px 10px; /* Adjust padding as needed */
-    margin-right: 3rem;
-    margin-left: 0.5rem;
+    margin-right: 5rem;
+    margin-left: 1rem;
     margin-top: -2rem;
 }
+
+.hero-buttons1 {
+    display: flex; /* Stack buttons vertically */
+    flex-direction: column;
+    margin-left: auto; /* Shift buttons to the left */
+    gap: 2px;  /* Adjust gap between buttons */
+    padding: px 10px; /* Adjust padding as needed */
+    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
 
 
 /* Mobile-specific adjustments */
@@ -448,6 +461,13 @@ h2 {
         font-size: 0.7em;
     }
 }
+
+
+
+
+
+
+
 
 
 
@@ -1207,7 +1227,7 @@ main1 {
     font-size: 1.2rem;
     padding-left: 4rem;
     padding-right: 2rem;
-    color: #666;
+    color: #555;
     margin-bottom: 30px;
 }
 
@@ -1237,18 +1257,18 @@ main1 {
 
 .step h2 {
     font-size: 1.5rem;
-    color: #7e438b;
+    color: #673979;
     margin-bottom: 10px;
 }
 
 .step p {
     font-size: 1rem;
-    color: #666;
+    color: #555;
 }
 
 .cta-button4 {
     display: inline-block;
-    background-color: #7e438b;
+    background-color: #673979;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -1258,8 +1278,8 @@ main1 {
 
 .cta-button4:hover {
     transform: translateY(-5px);
-    background-color: #d2d1d1;
-    color: #7e438b;
+    background-color: #bcbcbc;
+    color: #673979;
 }
 
 /* Main Section Styles for Mobile */
@@ -1332,7 +1352,7 @@ main1 {
 }
 
 .form-container h1 {
-    color: #7e438b;
+    color: #673979;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -1341,6 +1361,7 @@ main1 {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #333; /* Ensure label contrast */
 }
 
 .form-container input[type="text"],
@@ -1348,14 +1369,14 @@ main1 {
     width: 90%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #999;
     border-radius: 4px;
 }
 
 .form-container button {
     width: 100%;
     padding: 10px;
-    background-color: #7e438b;
+    background-color: #673979;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -1364,10 +1385,13 @@ main1 {
 }
 
 .form-container button:hover {
-    background-color: #693a75;
+    background-color: #593367;
 }
 
 .form-container textarea {
     height: 100px;
     resize: vertical;
 }
+
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,23 @@
     <meta name="description" content="Avantaland Peer-to-Peer Logistics">
     <meta name="author" content="Prince Dike">
     <title>Avantaland Peer-to-Peer Logistics Solution</title>
+    
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
     
     <!-- Favicon -->
     <link rel="icon" href="images/avfavicon.ico" type="image/x-icon">
     
-    <!-- Social Media Meta Settings for Facebook -->
+    <!-- Open Graph Metadata for Social Media -->
     <meta property="og:title" content="Avantaland Peer-to-Peer Logistics Solution">
     <meta property="og:type" content="website">
+    <meta property="og:description" content="Efficient and reliable peer-to-peer logistics solutions to send and receive items hassle-free.">
     
-    <!-- CSS Styles -->
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="styles/project.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- 
     
-    <!-- JavaScript for dynamic last modified date -->
+    <!-- JavaScript for Dynamic Last Modified Date -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const lastModified = new Date(document.lastModified);
@@ -30,21 +32,21 @@
         });
     </script>
 </head>
-<body>
-    <!-- Header -->
 
+<body>
+    <!-- Header Section -->
     <header>
         <div class="menus">
             <a href="https://d9linkx.github.io/wdd231/Avantaland/project.html">
-                <img id="logo" src="images/avlogow06.png" alt="Avantaland Peer-to-Peer Logistics" width="70">
+                <img id="logo" src="images/avlogow06.png" alt="Avantaland Logo" width="70">
             </a>
         </div>
-        <div>
-            <button class="hamburger" aria-label="Toggle navigation menu">
-                <span class="bar"></span>
-            </button>
-        </div>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+        </button>
     </header>
+
+    <!-- Mobile Navigation -->
     <nav class="mobile-nav" aria-label="Mobile navigation">
         <a href="project.html">Home</a>
         <a href="sendreceive.html">Send/Receive Items</a>
@@ -52,36 +54,62 @@
         <a href="about.html">About</a>
         <a href="roadmap.html">Roadmap</a>
     </nav>
-    
+
+    <!-- Main Content and Form Section -->
     <main>
         <div class="form-container">
             <h1>Send an Item</h1>
+            
+            <!-- Item Submission Form -->
             <form action="submit_form.php" method="post">
-                <label for="sender-name">Sender's name:</label>
-                <input type="text" id="sender-name" name="sender-name" required>
                 
-                <label for="sender-address">Sender's address:</label>
-                <input type="text" id="sender-address" name="sender-address" required>
+                <!-- Sender's Name Field -->
+                <label for="sender-name">Sender's Name:</label>
+                <input type="text" id="sender-name" name="sender-name" placeholder="e.g., John Doe" required aria-required="true">
                 
-                <label for="recipient-name">Recipient's name:</label>
-                <input type="text" id="recipient-name" name="recipient-name" required>
+                <!-- Sender's Address Field -->
+                <label for="sender-address">Sender's Address:</label>
+                <input type="text" id="sender-address" name="sender-address" placeholder="e.g., 123 Elm St, Springfield" required aria-required="true">
                 
-                <label for="recipient-address">Recipient's address:</label>
-                <input type="text" id="recipient-address" name="recipient-address" required>
+                <!-- Recipient's Name Fields -->
+                <fieldset>
+                    <legend>Recipient's Name</legend>
+
+                    <label for="recipient-first-name">First Name:</label>
+                    <input type="text" id="recipient-first-name" name="recipient-first-name" placeholder="e.g., Jane" required aria-required="true">
+
+                    <label for="recipient-other-names">Other Names:</label>
+                    <input type="text" id="recipient-other-names" name="recipient-other-names" placeholder="e.g., Anne Marie">
+
+                    <label for="recipient-last-name">Last Name:</label>
+                    <input type="text" id="recipient-last-name" name="recipient-last-name" placeholder="e.g., Smith" required aria-required="true">
+                </fieldset>
+
+                <!-- Recipient's Username Field -->
+                <label for="recipient-username">Recipient's Username:</label>
+                <input type="text" id="recipient-username" name="recipient-username" placeholder="e.g., janesmith123" required aria-required="true">
                 
-                <label for="item-details">Item details:</label>
-                <textarea id="item-details" name="item-details" required></textarea>
+                <!-- Recipient's Address Field -->
+                <label for="recipient-address">Recipient's Address:</label>
+                <input type="text" id="recipient-address" name="recipient-address" placeholder="e.g., 456 Oak Ave, Metropolis" required aria-required="true">
                 
-                <label for="special-instructions">Special instructions:</label>
-                <textarea id="special-instructions" name="special-instructions"></textarea>
+                <!-- Item Details Field -->
+                <label for="item-details">Item Details:</label>
+                <textarea id="item-details" name="item-details" placeholder="Describe the item, e.g., 'Medium-sized package, fragile.'" required aria-required="true"></textarea>
                 
-                <button type="submit">Send item</button>
+                <!-- Special Instructions Field -->
+                <label for="special-instructions">Special Instructions:</label>
+                <textarea id="special-instructions" name="special-instructions" placeholder="e.g., 'Handle with care' or 'Deliver before noon'"></textarea>
+                
+                <!-- Submit Button -->
+                <button type="submit" aria-label="Submit the form to send item">Send Item</button>
             </form>
         </div>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <nav>
+        <nav aria-label="Footer navigation">
             <ul>
                 <li><a href="project.html">Home</a></li>
                 <li><a href="sendreceive.html">Send/Receive</a></li>
@@ -89,8 +117,11 @@
             </ul>
         </nav>
         <p>Last modified: <span id="last-modified"></span></p>
-        <p>© 2024 Avantaland. All rights reserved.</p>
+        <p>&copy; 2024 Avantaland. All rights reserved.</p>
     </footer>
+    
+    <!-- External JavaScript File -->
     <script src="scripts/project.js"></script>
 </body>
+
 </html>
