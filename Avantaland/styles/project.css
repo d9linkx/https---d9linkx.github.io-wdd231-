@@ -544,6 +544,7 @@ p, ul li {
     background-color: #7e438b; /* Purple background color */
     color: #fff; /* White text color */
     padding: 20px;
+    margin-top: 1rem;
     margin-left: 0.7rem;
     margin-right: 0.6rem;
     border-radius: 10px; /* Optional: Rounded corners */
