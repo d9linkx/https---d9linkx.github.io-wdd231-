@@ -107,3 +107,15 @@ document.querySelectorAll('.carousel').forEach((carousel) => {
     carousel.querySelector('.next').addEventListener('click', moveNext);
     carousel.querySelector('.prev').addEventListener('click', movePrevious);
 });
+
+
+function toggleCarousel(carouselClass) {
+    const carousel = document.querySelector(`.${carouselClass} .carousel-content`);
+    if (carousel.classList.contains('carousel-hidden')) {
+        carousel.classList.remove('carousel-hidden');
+        carousel.classList.add('carousel-visible');
+    } else {
+        carousel.classList.remove('carousel-visible');
+        carousel.classList.add('carousel-hidden');
+    }
+}
