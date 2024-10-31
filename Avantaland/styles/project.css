@@ -366,7 +366,7 @@ h2 {
 /* Sidebar styling */
 .sidebar {
     position: fixed;
-    right: 300px; /* Initially hidden */
+    right: 900px; /* Initially hidden */
     top: 0;
     height: 100%;
     background-color: #f4f4f4;
