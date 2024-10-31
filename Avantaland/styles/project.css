@@ -286,7 +286,7 @@ h2 {
     flex-direction: column;
     margin-left: auto; /* Shift buttons to the left */
     gap: 2px;  /* Adjust gap between buttons */
-    padding: px 10px; /* Adjust padding as needed */
+    padding: 10px; /* Adjust padding as needed */
     margin-right: 5rem;
     margin-left: 1rem;
     margin-top: -2rem;
@@ -297,7 +297,7 @@ h2 {
     flex-direction: column;
     margin-left: auto; /* Shift buttons to the left */
     gap: 2px;  /* Adjust gap between buttons */
-    padding: px 10px; /* Adjust padding as needed */
+    padding: 10px; /* Adjust padding as needed */
     margin-right: 3rem;
     margin-left: 1rem;
     margin-top: 2rem;
@@ -368,7 +368,6 @@ h2 {
     position: fixed;
     right: 300px; /* Initially hidden */
     top: 0;
-    padding-left: -89rem;
     height: 100%;
     background-color: #f4f4f4;
     box-shadow: -2px 0 5px rgba(176, 176, 176, 0);
@@ -378,12 +377,10 @@ h2 {
 
 .sidebar-toggle {
     position: relative;
-    right: -290;
     top: 50%;
     transform: translateY(-50%);
     background-color: #7e438b;
     color: #fff;
-    border-radius: -1rem;
     cursor: pointer;
     z-index: 1000;
     margin-top: -1rem;
@@ -401,7 +398,6 @@ h2 {
     .sidebar {
         width: 50%;
         right: -50%;
-        width: -130px;
     }
 
     .sidebar-toggle {
@@ -513,7 +509,7 @@ h2:hover::after {
 
 /* Paragraph and List Item Styling */
 p {
-    margin: 15px 10; /* Consistent vertical margin for paragraphs */
+    margin: 15px 10px; /* Consistent vertical margin for paragraphs */
     line-height: 1.6; /* Improved line height for readability */
 }
 
@@ -711,7 +707,7 @@ p, ul li {
 
 .styled-list li {
     position: relative; /* Positions the pseudo-elements */
-    padding-left: -5px; /* Space for custom bullet */
+    padding-left: 5px; /* Space for custom bullet */
     margin: 10px 0; /* Space between list items */
     line-height: 1.5; /* Improved line height for readability */
 }
