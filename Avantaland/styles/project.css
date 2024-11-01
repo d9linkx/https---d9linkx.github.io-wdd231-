@@ -327,9 +327,9 @@ h2 {
 /* Social Icons Container Styling */
 .social-icons {
     display: flex;
-    margin-right: 2rem;
+    margin-right: -3rem;
     margin-bottom: 2rem;
-    gap: 5px; /* Spacing between icons */
+    gap: 15px; /* Spacing between icons */
     justify-content: center; /* Center align icons */
     padding: 20px; /* Adds padding around the container */
 }
