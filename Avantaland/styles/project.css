@@ -223,7 +223,7 @@ h2 {
     width: 100%; /* Full width for mobile */
     display: block;
     align-items: center; /* Center items horizontally */
-    margin-left: 0rem;
+    margin-left: -3rem;
     justify-content: center; /* Center items vertically */
     background-color: #f5f5f5;
     background-size: cover;
@@ -1390,3 +1390,19 @@ main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* Hide sidebar on mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
