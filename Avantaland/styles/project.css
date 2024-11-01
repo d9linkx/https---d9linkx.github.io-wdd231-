@@ -1198,8 +1198,7 @@ footer p {
 
 
 /* Main Section Styles for Desktop */
-main1 {
-    padding: 20px;
+main {
     background-color: #f9f9f9;
     margin-bottom: 2rem;
 }
@@ -1221,8 +1220,8 @@ main1 {
 
 .secondcontainer p {
     font-size: 1.2rem;
-    padding-left: 4rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: #555;
     margin-bottom: 30px;
 }
