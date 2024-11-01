@@ -1405,3 +1405,131 @@ main {
         display: none;
     }
 }
+
+
+
+
+
+
+
+
+
+/* Grid view for wider screens */
+@media (min-width: 768px) {
+    .directory-grid .directory-list {
+        flex-direction: row;
+        justify-content: flex-start; /* Align items to start of the container */
+        flex-wrap: wrap;
+        object-position: 0%;
+    }
+
+    .member-card {
+        width: auto; /* Two cards side by side in grid view */
+        align-items: flex-end;
+        flex-direction: row;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 0rem;
+        color: #333; /* Ensure text color is consistent for contrast */
+    }
+
+    main {
+        padding: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+}
+
+.member-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333; /* Dark text for high contrast */
+}
+
+.member-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
+.member-card h3 {
+    margin: 10px 0 5px;
+    color: #333; /* Dark text for high contrast */
+}
+
+.member-card p {
+    margin: 5px 0;
+    color: #555; /* Dark grey for body text */
+}
+
+.member-card a {
+    color: #7e438b; /* Darker blue for contrast */
+    text-decoration: none;
+}
+
+.member-card a:hover {
+    color: #ff5722; /* Orange for good contrast on hover */
+}
+
+.member-card:hover {
+    transform: scale(1.03); /* Slightly grow the card on hover */
+    animation-duration: inherit;
+}
+
+.directory-list .member-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add vertical spacing between rows */
+    padding: 1rem;
+}
+
+.directory-list .member-card img {
+    max-width: 80px;
+    margin-right: 20px;
+}
+
+.toggle-view {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.toggle-view button {
+    padding: 0.5rem 1rem;
+    margin: 0rem 5px;
+    margin-top: 2rem;
+    border: 1px solid #7e438b; /* Darker blue for contrast */
+    border-radius: 5px;
+    background-color: white;
+    color: #7e438b; /* Darker blue text */
+    cursor: pointer;
+}
+
+.toggle-view button.active {
+    background-color: #7e438b;
+    color: white;
+}
+
+.toggle-view button:hover {
+    background-color: #2d2d2d; /* Even darker blue for better hover contrast */
+    color: white;
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Akira Yamamoto",
+        "business": "Yamamoto Tech Solutions",
+        "address": "Roppongi, Minato City, Tokyo, Japan",
+        "phone": "555-123-4567",
+        "website": "https://yamamoto-tech.com",
+        "image": "akira.jpg",
+        "membership": 1,
+        "nationality": "Japanese"
+    },
+    {
+        "name": "Fatima Al-Farsi",
+        "business": "Al-Farsi Consulting",
+        "address": "Al Mouj, Muscat, Oman",
+        "phone": "555-234-5678",
+        "website": "https://alfarsi-consulting.com",
+        "image": "fatima.jpg",
+        "membership": 2,
+        "nationality": "Omani"
+    },
+    {
+        "name": "Diego Fernández",
+        "business": "Fernández Architecture Group",
+        "address": "Calle Mayor 5, Madrid, Spain",
+        "phone": "555-345-6789",
+        "website": "https://fernandez-architecture.com",
+        "image": "diego.jpg",
+        "membership": 3,
+        "nationality": "Spanish"
+    },
+    {
+        "name": "Amara Singh",
+        "business": "Singh Legal Services",
+        "address": "Connaught Place, New Delhi, India",
+        "phone": "555-456-7890",
+        "website": "https://singh-legal.com",
+        "image": "amara.jpg",
+        "membership": 2,
+        "nationality": "Indian"
+    },
+    {
+        "name": "Lars Svensson",
+        "business": "Svensson Financial Advisors",
+        "address": "Vasagatan 12, Stockholm, Sweden",
+        "phone": "555-567-8901",
+        "website": "https://svensson-financial.com",
+        "image": "lars.jpg",
+        "membership": 1,
+        "nationality": "Swedish"
+    },
+    {
+        "name": "Isabella Rossi",
+        "business": "Rossi Culinary Creations",
+        "address": "Via Roma 25, Florence, Italy",
+        "phone": "555-678-9012",
+        "website": "https://rossi-culinary.com",
+        "image": "isabella.jpg",
+        "membership": 3,
+        "nationality": "Italian"
+    },
+    {
+        "name": "Chen Wei",
+        "business": "Wei Import & Export",
+        "address": "Jiangning Road, Shanghai, China",
+        "phone": "555-789-0123",
+        "website": "https://wei-importexport.com",
+        "image": "chen.jpg",
+        "membership": 1,
+        "nationality": "Chinese"
+    },
+    {
+        "name": "Oyindamola Dike",
+        "business": "Oyin's Agro Ventures",
+        "address": "Lekki Phase 1, Lagos, Nigeria",
+        "phone": "555-890-1234",
+        "website": "https://oyins-agro.com",
+        "image": "oyin.jpg",
+        "membership": 2,
+        "nationality": "Nigerian"
+    }
+]
