@@ -220,7 +220,7 @@ h2 {
 
 /* Left section with hero background */
 .left-section {
-    width: 100%; /* Full width for mobile */
+    width: 104%; /* Full width for mobile */
     display: block;
     align-items: center; /* Center items horizontally */
     margin-left: -3rem;
@@ -265,7 +265,7 @@ h2 {
     color: #626262;
     text-align: left;
     letter-spacing: -0.5px; /* Adjust the letter spacing */
-    margin-right: -5.5rem;
+    margin-right: -5rem;
     margin-left: -1.7rem;
 }
 
