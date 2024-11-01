@@ -1479,6 +1479,7 @@ main {
 .member-card p {
     margin: 5px 0;
     color: #555; /* Dark grey for body text */
+    margin-left: -2rem;
 }
 
 .member-card a {
