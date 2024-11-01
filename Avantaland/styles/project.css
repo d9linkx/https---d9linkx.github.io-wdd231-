@@ -295,7 +295,6 @@ h2 {
 .hero-buttons1 {
     display: flex; /* Stack buttons vertically */
     flex-direction: column;
-    margin-left: auto; /* Shift buttons to the left */
     gap: 2px;  /* Adjust gap between buttons */
     padding: 10px; /* Adjust padding as needed */
     margin-right: 3rem;
